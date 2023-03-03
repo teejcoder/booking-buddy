@@ -382,12 +382,12 @@ a h1 {
 
 
 header.container {
-    height: 300px;
+    height: 250px;
     background-color: #ffc900;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    border-bottom: 3px solid black;
+    border-bottom: 2px solid black;
 }
 .navbar {
     background-color: #ffc900;
@@ -395,30 +395,31 @@ header.container {
     justify-content: space-between;
     align-items: center;
     padding: 10px 30px;
-    border-bottom: 3px solid black;
+    border-bottom: 2px solid black;
 }
-
-
 
 /*************************************************************************************************/
 /*
 **    /FEED
 */
 /*************************************************************************************************/
-.feedLi, .img-fluid {
+
+.img-fluid {
     height: 500px;
     width: 500px;
     padding: auto;
     margin: auto;
     border-radius: 25px;
-    
-    box-shadow: 3px 5px 24px 8px rgba(168,168,168,0.75);
-    -webkit-box-shadow: 3px 5px 24px 8px rgba(168,168,168,0.75);
-    -moz-box-shadow: 3px 5px 24px 8px rgba(168,168,168,0.75);
+    border: 3px solid black;
+
+    box-shadow: 10px 10px 0px 4px rgba(0,0,0,1);
+    -webkit-box-shadow: 10px 10px 0px 4px rgba(0,0,0,1);
+    -moz-box-shadow: 10px 10px 0px 4px rgba(0,0,0,1);
 }
 
-ul,.feedGrid{
 
+
+ul,.feedGrid{
     padding-bottom: 5%;
     padding-left: 0;
     margin: 5%;
@@ -435,6 +436,40 @@ ul,.feedGrid{
 
 }
 
+img .img-fluid {
+  border: 2px solid black;
+}
+
+
+/*************************************************************************************************/
+/*
+**       /PROFILE
+*/
+/*************************************************************************************************/
+
+.profileBanner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+}
+
+
+.profilePostBox {
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.form-control {
+  height: 60px;
+  width: 250px;
+  border: none;
+  border-bottom: 1px solid #969696;
+}
+
+
 
 
 
@@ -443,6 +478,8 @@ ul,.feedGrid{
 **       
 */
 /*************************************************************************************************/
+
+
 
 
 
