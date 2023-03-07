@@ -361,24 +361,96 @@ body {
     font-family: 'Mabry pro', sans-serif;
 }
 
+button, .btn, .btn-primary {
+  height: 50px;
+  width: 150px;
+  border-radius: 25px;
+  border: 2px solid black;
+  background-color: #ffc900;
+  cursor: pointer;
+}
+
+
 
 /*************************************************************************************************/
 /*
-**        NAVBAR HEADER
+**       /INDEX
+*/
+/*************************************************************************************************/
+
+.indexLanding {
+  height: 1050px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.indexLandingForm {
+  height: 800px;
+  width: 600px;
+  border: 2px solid black;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.indexLandingImg {
+  height: 800px;
+  width: 600px;
+  border: 2px solid black;
+  border-radius: 25px;
+  margin-right: 20px;
+}
+
+.mb-3 {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.indexSubmit {
+  height: 50px;
+  width: 150px;
+  margin-bottom: 10px;
+}
+
+.indexSignup {
+  height: 50px;
+  width: 150px;
+  border: 2px solid black;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffc900;
+}
+
+
+
+/*************************************************************************************************/
+/*
+**        NAVBAR HEADER & FOOTER
 */
 /*************************************************************************************************/
 
 a {
-    color: black;
-    text-decoration: none;
-    list-style-type: none;
+  color: black;
+  text-decoration: none;
+  list-style-type: none;
     font-weight: 400;
 }
 
 a h1 {
-    font-weight: 400;
-    font-size: 35px;
+  font-weight: 400;
+  font-size: 35px;
 }
+
 
 
 header.container {
@@ -398,6 +470,15 @@ header.container {
     border-bottom: 2px solid black;
 }
 
+.footer {
+  background-color: #ffc900;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  border-top: 2px solid black;
+}
+
 /*************************************************************************************************/
 /*
 **    /FEED
@@ -412,9 +493,6 @@ header.container {
     border-radius: 25px;
     border: 3px solid black;
 
-    box-shadow: 10px 10px 0px 4px rgba(0,0,0,1);
-    -webkit-box-shadow: 10px 10px 0px 4px rgba(0,0,0,1);
-    -moz-box-shadow: 10px 10px 0px 4px rgba(0,0,0,1);
 }
 
 
@@ -429,8 +507,8 @@ ul,.feedGrid{
     list-style-type: none;
 
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
     grid-column-gap: 1%;
     grid-row-gap: 4%;
 
@@ -454,12 +532,36 @@ img .img-fluid {
   padding: 30px;
 }
 
+.profilePostBoxContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-.profilePostBox {
-  height: 350px;
+.profilePostBox{
+  width: 30%;
   display: flex;
   flex-direction: column;
-  
+  align-items: center;
+  padding: 50px 0px;
+  border: 2px solid black;
+  border-radius: 25px;
+}
+
+.profilePosts {
+  padding-bottom: 5%;
+  padding-left: 0;
+  margin: 5%;
+
+  text-align: center;
+  text-decoration: none;
+  list-style-type: none;
+
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(3, auto);
+  grid-column-gap: 1%;
+  grid-row-gap: 4%;
 }
 
 .form-control {
@@ -467,6 +569,51 @@ img .img-fluid {
   width: 250px;
   border: none;
   border-bottom: 1px solid #969696;
+}
+
+.img-upload {
+  height: 60px;
+  width: 250px;
+}
+
+.returnToFeedButton {
+  height: 50px;
+  width: 150px;
+  border-radius: 25px;
+  border: 2px solid black;
+  background-color: #ffc900;
+}
+
+.mb-3 {
+  margin: 30px 0px;
+}
+
+
+/*************************************************************************************************/
+/*
+**       /SIGNUP
+*/
+/*************************************************************************************************/
+
+.signupForm {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0px;
+}
+
+/*************************************************************************************************/
+/*
+**       /LOGIN
+*/
+/*************************************************************************************************/
+
+.loginContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0px;
 }
 
 
@@ -478,9 +625,6 @@ img .img-fluid {
 **       
 */
 /*************************************************************************************************/
-
-
-
 
 
 /*************************************************************************************************/

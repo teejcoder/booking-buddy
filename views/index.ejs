@@ -1,11 +1,60 @@
 <%- include('partials/header') -%>
 
-<main class="container">
-    <div class="row justify-content-around mt-5">
-        <a href="/login" class="col-3 btn btn-primary"> Login</a>
-        <a href="/signup" class="col-3 btn btn-primary"> Signup</a>
+<main class="indexLanding">
+
+    <img class="indexLandingImg" src="https://images.pexels.com/photos/1644616/pexels-photo-1644616.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+   
+    <div class="indexLandingDiv">
+
+        <!-- login -->
+
+        <section class="indexLoginForm">
+
+            <% if (locals.messages.errors) { %> <% messages.errors.forEach( el => { %>
+
+            <div class="alert alert-danger"><%= el.msg %></div>
+
+            <% }) %> <% } %> <% if (locals.messages.info) { %> <%
+            messages.info.forEach( el => { %>
+
+            <div class="alert alert-info"><%= el.msg %></div>
+            <% }) %> <% } %>
+
+            <form class="indexLandingForm" action="/login" method="POST">
+
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label"
+                    >Email address</label
+                    >
+                    <input
+                    type="email"
+                    class="form-control"
+                    id="exampleInputEmail1"
+                    aria-describedby="emailHelp"
+                    name="email"
+                    />
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input
+                    type="password"
+                    class="form-control"
+                    id="exampleInputPassword1"
+                    name="password"
+                    />
+                </div>
+
+                <button type="submit" class="indexSubmit">Login</button>
+
+                <a href="/signup" class="indexSignup"> Signup</a>
+
+            </form>
+
+        </section>
+
     </div>
+
 </main>
-    
 
 <%- include('partials/footer') -%>
