@@ -1,6 +1,7 @@
 const cloudinary = require("../middleware/cloudinary");
 const Post = require("../models/Post");
-const Comment = require("../models/Comment")
+const Comment = require("../models/Comment");
+const User = require("../models/User");
 
 module.exports = {
   getProfile: async (req, res) => {
@@ -25,6 +26,22 @@ module.exports = {
       const comments = await Comment.find({post: req.params.id}).sort({ 
       createdAt: "desc" }).lean();
       res.render("post.ejs", { post: post, user: req.user, comments: comments });
+    } catch (err) {
+      console.log(err);
+    }
+  },
+  createProfilePic: async (req, res) => {
+    try {
+      // Upload image to cloudinary
+      const result = await cloudinary.uploader.upload(req.file.path);
+
+      await User.create({
+        image: result.secure_url,
+        cloudinaryId: result.public_id,
+        user: req.user.id,
+      });
+      console.log("Profile Pic has been added!");
+      res.redirect("/profile");
     } catch (err) {
       console.log(err);
     }
