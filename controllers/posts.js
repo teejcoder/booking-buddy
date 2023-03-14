@@ -2,6 +2,7 @@ const cloudinary = require("../middleware/cloudinary");
 const Post = require("../models/Post");
 const Comment = require("../models/Comment");
 const User = require("../models/User");
+const { image } = require("../middleware/cloudinary");
 
 module.exports = {
   getProfile: async (req, res) => {
@@ -30,22 +31,6 @@ module.exports = {
       console.log(err);
     }
   },
-  createProfilePic: async (req, res) => {
-    try {
-      // Upload image to cloudinary
-      const result = await cloudinary.uploader.upload(req.file.path);
-
-      await User.create({
-        image: result.secure_url,
-        cloudinaryId: result.public_id,
-        user: req.user.id,
-      });
-      console.log("Profile Pic has been added!");
-      res.redirect("/profile");
-    } catch (err) {
-      console.log(err);
-    }
-  },
   createPost: async (req, res) => {
     try {
       // Upload image to cloudinary
@@ -65,6 +50,31 @@ module.exports = {
       console.log(err);
     }
   },
+    getProfilePic: async (req, res) => {
+    try {
+        const profilePic = await User.find({ image: req.image.id });
+        res.render("profile.ejs", { User: image, user: req.user });
+      } catch (err) {
+        console.log(err);
+      }
+  },
+    createProfilePic: async (req, res) => {
+    try {
+      // Upload image to cloudinary
+      const result = await cloudinary.uploader.upload(req.file.path);
+
+      await User.create({
+        image: result.secure_url,
+        cloudinaryId: result.public_id,
+        user: req.user.id,
+      });
+      console.log("Profile Pic has been added!");
+      res.redirect("/profile");
+    } catch (err) {
+      console.log(err);
+    }
+  },
+
   likePost: async (req, res) => {
     try {
       await Post.findOneAndUpdate(

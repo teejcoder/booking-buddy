@@ -10,8 +10,7 @@ router.get("/:id", ensureAuth, postsController.getPost);
 router.post("/createPost", upload.single("file"), postsController.createPost);
 
 router.post("/createProfilePic", upload.single("file"), postsController.createProfilePic);
-
-router.get("/profile", ensureAuth, postsController.createProfilePic);
+router.get("/getProfilePic", ensureAuth, postsController.getProfilePic);
 
 router.put("/likePost/:id", postsController.likePost);
 

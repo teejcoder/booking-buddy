@@ -532,14 +532,33 @@ img .img-fluid {
   padding: 30px;
 }
 
-/* PROFILE PIC */
-.profilePic {
-  height: 100px;
-  width: 100px;
-  border: 1px solid black;
-  border-radius: 50px;
-  background-size: cover;
+/* NEW */
+/* BAND NAME BANNER */
+.profileUserName {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 2px solid black;
 }
+
+/* BAND MAIN IMAGE */
+.profileMainImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 50px;
+  border: 2px solid black;
+}
+
+
+/* OLD */
+
+
+
+
+
 
 .profilePostBoxContainer {
   display: flex;

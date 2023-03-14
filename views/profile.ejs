@@ -5,23 +5,77 @@
     <div class="profileBanner">
         <p><strong>User Name</strong>: <%= user.userName %></p>
         <p><strong>Email</strong>: <%= user.email %></p>
-        <img class="profilePic"  />
 
-        <!-- DISPLAY PROFILE PIC -->
-        <form action="/post/createProfilePic" enctype="multipart/form-data" method="POST">
-
-          <div class="mb-3">
-            <label for="imgUpload" class="form-label">Image</label>
-            <input type="file" class="img-upload" id="imageUpload" name="file">
-          </div>
-
-          <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
-
-        </form>
-      
         <a href="/logout" class="profileLogout">Logout</a>
 
     </div>
+
+
+    <!-- 
+      /*************************************************************************************************/
+      /*
+      **       .profileUserName
+      */
+      /*************************************************************************************************/
+    -->
+
+    <div class="profileUserName">
+
+      <h2>band name</h2>
+      <p><strong>User Name</strong>: <%= user.userName %></p>
+
+      <div class="mt-5">
+        <h2>Add a comment</h2>
+        <form action="/bandName/createBandName/" method="POST">
+          <div class="mb-3">
+              <label for="comment" class="form-label">Comment</label>
+              <input type="text" class="form-control" id="comment" name="comment">
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+
+    </div>
+
+
+
+
+    <!-- 
+      /*************************************************************************************************/
+      /*
+      **       .profileMainImage
+      */
+      /*************************************************************************************************/
+    -->
+
+    <div class="profileMainImage">
+
+      <form action="" enctype="multipart/form-data" method="POST">
+                <!-- action="/post/createPost" -->
+
+        <div class="mb-3">
+          <label for="imgUpload" class="form-label">Image</label>
+          <input type="file" class="img-upload" id="imageUpload" name="file">
+        </div>
+
+        <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
+
+        <a class="returnToFeedButton" href="/feed">Return to Feed</a>
+      </form>
+
+
+    </div>
+
+
+
+        <!-- 
+      /*************************************************************************************************/
+      /*
+      **       
+      */
+      /*************************************************************************************************/
+    -->
+
         
     <div class="profilePostBoxContainer">
 
@@ -51,6 +105,9 @@
           <a class="returnToFeedButton" href="/feed">Return to Feed</a>
         </form>
       </div>
+
+
+
     </div>
   </div>
 
