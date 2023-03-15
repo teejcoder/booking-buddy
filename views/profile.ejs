@@ -1,6 +1,55 @@
 <%- include('partials/header') -%>
 
-  <div class="col-6">
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User Profile</title>
+  </head>
+  <body>
+
+
+    <div class="profileContainer">
+      <div class="allProfileContainers">
+
+        <div class="profileFirst">
+
+          <h1><%= user.userName %></h1>
+      
+        </div>
+  
+        <img src="<%= user.image %>">
+        <h2>Title:</h2>
+        <p><%= user.title %></p>
+        <h2>Description:</h2>
+        <p><%= user.description %></p>
+        <h2>Genre:</h2>
+        <p><%= user.genre %></p>
+        <h2>Year Formed:</h2>
+        <p><%= user.yearFormed %></p>
+        <h2>Members:</h2>
+        <ul>
+          <% user.members.forEach(function(member) { %>
+            <li><%= member %></li>
+          <% }); %>
+        </ul>
+        <% if (user.website) { %>
+          <h2>Website:</h2>
+          <p><%= user.website %></p>
+        <% } %>
+
+
+
+
+      </div>
+    </div>
+  
+  </body>
+</html>
+
+
+<%- include('partials/footer') -%>
+
+<div class="col-6">
 
     <div class="profileBanner">
         <p><strong>User Name</strong>: <%= user.userName %></p>
@@ -18,27 +67,7 @@
       */
       /*************************************************************************************************/
     -->
-
-    <div class="profileUserName">
-
-      <h2>band name</h2>
-      <p><strong>User Name</strong>: <%= user.userName %></p>
-
-      <div class="mt-5">
-        <h2>Add a comment</h2>
-        <form action="/bandName/createBandName/" method="POST">
-          <div class="mb-3">
-              <label for="comment" class="form-label">Comment</label>
-              <input type="text" class="form-control" id="comment" name="comment">
-          </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-      </div>
-
-    </div>
-
-
-
+    
 
     <!-- 
       /*************************************************************************************************/
@@ -47,24 +76,6 @@
       */
       /*************************************************************************************************/
     -->
-
-    <div class="profileMainImage">
-
-      <form action="" enctype="multipart/form-data" method="POST">
-                <!-- action="/post/createPost" -->
-
-        <div class="mb-3">
-          <label for="imgUpload" class="form-label">Image</label>
-          <input type="file" class="img-upload" id="imageUpload" name="file">
-        </div>
-
-        <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
-
-        <a class="returnToFeedButton" href="/feed">Return to Feed</a>
-      </form>
-
-
-    </div>
 
 
 
@@ -125,6 +136,3 @@
     </ul>
 
   </div>  
-
-
-<%- include('partials/footer') -%>

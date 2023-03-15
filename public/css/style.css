@@ -456,6 +456,7 @@ a h1 {
 header.container {
     height: 250px;
     background-color: #ffc900;
+    
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -532,28 +533,21 @@ img .img-fluid {
   padding: 30px;
 }
 
-/* NEW */
-/* BAND NAME BANNER */
-.profileUserName {
+.allProfileContainers {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  border: 2px solid black;
 }
 
-/* BAND MAIN IMAGE */
-.profileMainImage {
+.profileFirst {
   display: flex;
-  justify-content: center;
   align-items: center;
-  flex-direction: column;
-  margin-bottom: 50px;
-  border: 2px solid black;
+  justify-content: center;
+  height: 30rem;
+  width: 100%;
+  background-color: darksalmon;
 }
-
-
-/* OLD */
 
 
 

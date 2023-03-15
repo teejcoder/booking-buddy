@@ -1,4 +1,5 @@
 <%- include('partials/header') -%>
+
 <div class="container">
   <div class="row justify-content-center mt-5">
     <div class="col-6">
@@ -12,7 +13,7 @@
         >
           <button class="btn btn-primary fa fa-heart" type="submit"><%= post.likes%></button>
         </form>
-        <!-- <h3 class="col-3">Likes: <%= post.likes %></h3> -->
+        <h3 class="col-3">Likes: <%= post.likes %></h3>
         <%if(post.user == user.id){ %>
         <form
           action="/post/deletePost/<%= post.id %>?_method=DELETE"
@@ -52,3 +53,8 @@
 </div>
 
 <%- include('partials/footer') -%>
+
+
+
+
+

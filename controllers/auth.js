@@ -84,12 +84,6 @@ exports.postSignup = (req, res, next) => {
     gmail_remove_dots: false,
   });
 
-  const user = new User({
-    userName: req.body.userName,
-    email: req.body.email,
-    password: req.body.password,
-    image: req.body.image,
-  });
 
   User.findOne(
     { $or: [{ email: req.body.email }, { userName: req.body.userName }] },
