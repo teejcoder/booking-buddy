@@ -1,9 +1,10 @@
 <%- include('partials/header') -%>
-    <main class="container">
+
+<div class="signupPage">
+
+    <img src="https://opengameart.org/sites/default/files/tilesetprev7.png" alt="">
 
         <div class="signupFormContainer">
-
-            <section class="signupForm">
 
                 <% if (locals.messages.errors) { %>
                     <% messages.errors.forEach( el => { %>
@@ -15,6 +16,7 @@
                         <div class="alert alert-info"><%= el.msg %></div>
                     <% }) %>    
                 <% } %>
+
                 <form action="/user/createUser/" method="POST" enctype="multipart/form-data">
 
                   <label for="userName">User Name:</label>
@@ -56,10 +58,8 @@
 
                   </form>
 
-            </section>
-
         </div>
+</div>
 
-    </main>
 
 <%- include('partials/footer') -%>

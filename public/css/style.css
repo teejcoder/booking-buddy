@@ -357,10 +357,14 @@
 */
 /*************************************************************************************************/
 
-
 body {
     font-family: 'Mabry pro', sans-serif;
     background-color :#fef4cc;
+}
+
+input, textarea {
+  font-family: 'Mabry pro', sans-serif;
+  background-color :#fef4cc;
 }
 
 button, .btn, .btn-primary {
@@ -487,7 +491,7 @@ a h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 140px;
+  font-size: 130px;
   margin: 0;
   background-color: #ffc900;
 }
@@ -586,14 +590,15 @@ img .img-fluid {
 */
 
 .hero {
+  height: 1250px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 100px;
+  flex-direction: row;
 }
 
 .profileSecondLeft {
-  height: 600px;
+  height: 50%;
   width: 40%;
   border: 4px solid black;
   border-right: none;
@@ -604,29 +609,35 @@ img .img-fluid {
   background-color: #00ffc9;
 }
 
-.profileSecondRight {
-  height: 600px;
-  width: 40%;
-  border: 4px solid black;
-  padding: 150px 20px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  background-color: #00ffc9;
-}
-
 .profileSecondLeft > .mainImage {
   border: 2px solid black;
-  height: 550px;
-  width: 75%;
+
   background-size: auto;
   object-fit: cover;
 }
 
+.profileSecondRight {
+  height: 50%;
+  width: 40%;
+  border: 4px solid black;
+  padding: 150px 0px;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #00ffc9;
+}
 
+.profilePieces {
+  height: 300px;
+  width: 75%;
+  border: 2px solid black;
+  border-radius: 1px;
+  background-color :#fef4cc;
+}
 
-
-
+.profileBio {
+  height: 100px;
+  align-self: flex-start;
+}
 
 
 
@@ -693,11 +704,19 @@ img .img-fluid {
 */
 /*************************************************************************************************/
 
-.signupForm {
-  background-color: white;
+.signupPage {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.signupFormContainer > form {
+  height: 750px;
+  width: 500px;
+  border: 5px solid pink;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   margin: 50px 0px;
 }
 
