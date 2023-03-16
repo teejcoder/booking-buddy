@@ -11,31 +11,39 @@
     <div class="profileContainer">
       <div class="allProfileContainers">
 
-        <div class="profileFirst">
+          <div class="profileFirst">
+              <h1 class="profileUserName"><%= user.userName %></h1>
+          </div>
 
-          <h1><%= user.userName %></h1>
-      
-        </div>
-  
-        <img src="<%= user.image %>">
-        <h2>Title:</h2>
-        <p><%= user.title %></p>
-        <h2>Description:</h2>
-        <p><%= user.description %></p>
-        <h2>Genre:</h2>
-        <p><%= user.genre %></p>
-        <h2>Year Formed:</h2>
-        <p><%= user.yearFormed %></p>
-        <h2>Members:</h2>
-        <ul>
-          <% user.members.forEach(function(member) { %>
-            <li><%= member %></li>
-          <% }); %>
-        </ul>
-        <% if (user.website) { %>
-          <h2>Website:</h2>
-          <p><%= user.website %></p>
-        <% } %>
+          <div class="hero">
+
+            <div class="profileSecondLeft">
+                <img class="mainImage" src="<%= user.image %>">
+            </div>
+
+            <div class="profileSecondRight">
+              <h2>Bio:</h2>
+              <p><%= user.description %></p>
+              <h2>Genre:</h2>
+              <p><%= user.genre %></p>
+              <h2>Year Formed:</h2>
+              <p><%= user.yearFormed %></p>
+              <h2>Members:</h2>
+              <ul>
+                <% user.members.forEach(function(member) { %>
+                  <li><%= member %></li>
+                <% }); %>
+              </ul>
+              <% if (user.website) { %>
+                <h2>Website:</h2>
+                <p><%= user.website %></p>
+              <% } %>
+
+            </div>
+
+         </div>
+        
+
 
 
 
@@ -47,7 +55,7 @@
 </html>
 
 
-<%- include('partials/footer') -%>
+
 
 <div class="col-6">
 
@@ -136,3 +144,6 @@
     </ul>
 
   </div>  
+
+
+  <%- include('partials/footer') -%>

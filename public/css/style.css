@@ -11,6 +11,7 @@
  html {
     line-height: 1.15; /* 1 */
     -webkit-text-size-adjust: 100%; /* 2 */
+    width: 100%;
   }
   
   /* Sections
@@ -359,6 +360,7 @@
 
 body {
     font-family: 'Mabry pro', sans-serif;
+    background-color :#fef4cc;
 }
 
 button, .btn, .btn-primary {
@@ -451,24 +453,24 @@ a h1 {
   font-size: 35px;
 }
 
-
-
-header.container {
-    height: 250px;
-    background-color: #ffc900;
-    
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    border-bottom: 2px solid black;
-}
 .navbar {
+    height: 100px;
     background-color: #ffc900;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 30px;
-    border-bottom: 2px solid black;
+    border-bottom: 4px solid black;
+}
+
+.userNameHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 200px;
+  height: 100px;
+  margin: 0;
+  background-color: #ffc900;
 }
 
 .footer {
@@ -476,9 +478,20 @@ header.container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 150px;
   padding: 10px 30px;
-  border-top: 2px solid black;
+  border-top: 4px solid black;
+
 }
+.userNameFooter{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 140px;
+  margin: 0;
+  background-color: #ffc900;
+}
+
 
 /*************************************************************************************************/
 /*
@@ -525,7 +538,6 @@ img .img-fluid {
 **       /PROFILE
 */
 /*************************************************************************************************/
-
 .profileBanner {
   display: flex;
   justify-content: space-between;
@@ -540,14 +552,78 @@ img .img-fluid {
   flex-direction: column;
 }
 
+
+
+
+/*
+**      STICKY USERNAME AT THE TOP
+*/
+
 .profileFirst {
+  height: 300px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  height: 30rem;
+  justify-content: flex-start ;
+  border-bottom: 4px solid black;
+  background-color:  rgb(240 150 228);
   width: 100%;
-  background-color: darksalmon;
 }
+
+.profileFirst > h1 {
+  font-size: 200px;
+  height: 100%;
+  width: 100px;
+  z-index: 999;
+}
+
+.profileUserName {
+  position: sticky;
+  top: 0;
+}
+
+/*
+**   /PROFILE PIC AND Bio CONTAINER
+*/
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+}
+
+.profileSecondLeft {
+  height: 600px;
+  width: 40%;
+  border: 4px solid black;
+  border-right: none;
+  padding: 150px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  background-color: #00ffc9;
+}
+
+.profileSecondRight {
+  height: 600px;
+  width: 40%;
+  border: 4px solid black;
+  padding: 150px 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #00ffc9;
+}
+
+.profileSecondLeft > .mainImage {
+  border: 2px solid black;
+  height: 550px;
+  width: 75%;
+  background-size: auto;
+  object-fit: cover;
+}
+
+
 
 
 
