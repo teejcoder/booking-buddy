@@ -368,8 +368,9 @@ input, textarea {
 }
 
 button, .btn, .btn-primary {
-  height: 50px;
+  height: 3rem;
   width: 150px;
+  padding: 12px 24px;
   border-radius: 25px;
   border: 2px solid black;
   background-color: #ffc900;
@@ -598,11 +599,11 @@ img .img-fluid {
 }
 
 .profileSecondLeft {
-  height: 50%;
+  height: 80%;
   width: 40%;
   border: 4px solid black;
   border-right: none;
-  padding: 150px 0px;
+
   display: flex;
   align-items: center;
   justify-content: right;
@@ -611,34 +612,44 @@ img .img-fluid {
 
 .profileSecondLeft > .mainImage {
   border: 2px solid black;
-
+  width: 90%;
   background-size: auto;
   object-fit: cover;
 }
 
 .profileSecondRight {
-  height: 50%;
+  height: 80%;
   width: 40%;
   border: 4px solid black;
-  padding: 150px 0px;
+
   display: flex;
+  align-items: center;
+  flex-direction: column;
   justify-content: space-evenly;
   background-color: #00ffc9;
 }
 
+.allProfilePieces {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .profilePieces {
-  height: 300px;
-  width: 75%;
-  border: 2px solid black;
+  height: 100%;
+  width: 100%;
+  padding: 0px 10px;
+  border-right: 4px solid #000;
+  border-left: 4px solid #000;
   border-radius: 1px;
   background-color :#fef4cc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
-
-.profileBio {
-  height: 100px;
-  align-self: flex-start;
-}
-
 
 
 .profilePostBoxContainer {
