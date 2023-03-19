@@ -601,9 +601,7 @@ img .img-fluid {
 .profileSecondLeft {
   height: 80%;
   width: 40%;
-  border: 4px solid black;
-  border-right: none;
-
+  border: 2px solid black;
   display: flex;
   align-items: center;
   justify-content: right;
@@ -620,13 +618,10 @@ img .img-fluid {
 .profileSecondRight {
   height: 80%;
   width: 40%;
-  border: 4px solid black;
-
+  border: 2px solid black;
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: space-evenly;
-  background-color: #00ffc9;
 }
 
 .allProfilePieces {
@@ -640,10 +635,6 @@ img .img-fluid {
 .profilePieces {
   height: 100%;
   width: 100%;
-  padding: 0px 10px;
-  border-right: 4px solid #000;
-  border-left: 4px solid #000;
-  border-radius: 1px;
   background-color :#fef4cc;
   display: flex;
   align-items: center;
