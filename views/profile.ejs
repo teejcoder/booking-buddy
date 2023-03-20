@@ -7,9 +7,6 @@
   </head>
   <body>
 
-
-    <div class="profileContainer">
-
       <div class="allProfileContainers">
 
 
@@ -25,26 +22,14 @@
             </div>
 
             <div class="profileSecondRight">
-
               <div class="allProfilePieces">
-                <div class="profilePieces profileGenre">
-                  <h2>Genre:</h2>
-                  <p><%= user.genre %></p>
-                </div>
 
-                  <div class="profilePieces profileBio">
-                    <h2>Bio:</h2>
-                    <p><%= user.description %></p>
-                  </div>
 
-                  <div class="profilePieces profileYearFormed">
-                    <h2>Year Formed:</h2>
-                    <p><%= user.yearFormed %></p>
-                  </div>
-
+                <div class="profileMembersGenre">
+                  
                   <div class="profilePieces profileMembers">
                     <h2>Members:</h2>
-
+  
                     <ul>
                       <% user.members.forEach(function(member) { %>
                         <li><%= member %></li>
@@ -52,24 +37,34 @@
                     </ul>
                   </div>
 
-                  <div class="profilePieces profileWebsite">
-                    <% if (user.website) { %>
-                      <h2>Website:</h2>
-                      <p><%= user.website %></p>
-                    <% } %>
-                  </div>
-              </div>
 
+                  <div class="profilePieces profileGenreAndYear">
+                    <div class="profilePieces profileGenre">
+                      <h2><%= user.genre %></h2>
+                    </div>
+
+                    <div class="profilePieces profileYearFormed">
+                      <p><%= user.yearFormed %></p>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="profilePieces profileBio">
+                  <h2>Bio:</h2>
+                  <p><%= user.description %></p>
+                </div>
+
+                <div class="btn btn-primary profileWebsite">
+                  <% if (user.website) { %>
+                    <a href="<%=user.website%>" target="_blank"> Website</a>
+                  <% } %>
+                </div>
+
+              </div>
             </div>
          </div>
-        
-
-
-
-
-
       </div>
-    </div>
   
   </body>
 </html>
