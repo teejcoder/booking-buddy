@@ -1,8 +1,9 @@
-<%- include('partials/header') -%>
+
 
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="/css/style.css" />
     <title><%= user.id %></title>
   </head>
   <body>
@@ -55,11 +56,62 @@
                   <p><%= user.description %></p>
                 </div>
 
-                <div class="btn btn-primary profileWebsite">
+
+              <!-- BUTTON LINKS ON /profile -->
+              <div class="buttonLinks">
+
+                <!-- website -->
+                <div class="btn btn-primary profileWebsiteButton">
                   <% if (user.website) { %>
                     <a href="<%=user.website%>" target="_blank"> Website</a>
                   <% } %>
                 </div>
+
+                <!-- tiktok -->
+                <div class="btn btn-primary profileTiktokButton">
+                  <% if (user.tiktok) { %>
+                    <a href="<%=user.tiktok%>" target="_blank">Tiktok</a>
+                  <% } %>
+                </div>                
+                
+                <!-- instagram -->
+                <div class="btn btn-primary profileInstagramButton">
+                  <% if (user.instagram) { %>
+                    <a href="<%=user.instagram%>" target="_blank">Instagram</a>
+                  <% } %>
+                </div>
+
+                <!-- facebook -->
+                <div class="btn btn-primary profileFacebookButton">
+                  <% if (user.facebook) { %>
+                    <a href="<%=user.facebook%>" target="_blank">Facebook</a>
+                  <% } %>
+                </div>
+                
+                <!-- spotify -->
+                <div class="btn btn-primary profileSpotifyButton">
+                  <% if (user.spotify) { %>
+                    <a href="<%=user.spotify%>" target="_blank">Spotify</a>
+                  <% } %>
+                </div>                
+
+                <!-- soundcloud -->
+                <div class="btn btn-primary profileSoundcloudButton">
+                  <% if (user.soundcloud) { %>
+                    <a href="<%=user.soundcloud%>" target="_blank">Soundcloud</a>
+                  <% } %>
+                </div>                
+
+                <!-- tidal -->
+                <div class="btn btn-primary profileTidalButton">
+                  <% if (user.tidal) { %>
+                    <a href="<%=user.tidal%>" target="_blank">Tidal</a>
+                  <% } %>
+                </div>
+
+
+              </div>
+
 
               </div>
             </div>
