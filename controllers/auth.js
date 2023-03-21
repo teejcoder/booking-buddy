@@ -32,7 +32,7 @@ exports.postLogin = (req, res, next) => {
     }
     if (!user) {
       req.flash("errors", info);
-      return res.redirect("/login");
+      return res.redirect("/profile");
     }
     req.logIn(user, (err) => {
       if (err) {

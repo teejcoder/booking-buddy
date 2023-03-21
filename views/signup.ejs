@@ -1,9 +1,6 @@
 <%- include('partials/header') -%>
 
 <div class="signupPage">
-
-    <img src="https://opengameart.org/sites/default/files/tilesetprev7.png" alt="">
-
         <div class="signupFormContainer">
 
                 <% if (locals.messages.errors) { %>
@@ -17,46 +14,81 @@
                     <% }) %>    
                 <% } %>
 
+
+                    
+
                 <form action="/user/createUser/" method="POST" enctype="multipart/form-data">
 
-                  <label for="userName">User Name:</label>
-                  <input type="text" id="userName" name="userName" required>
-                
-                  <label for="email">Email:</label>
-                  <input type="email" id="email" name="email" required>
-                
-                  <label for="password">Password:</label>
-                  <input type="password" id="password" name="password">
-                
-                  <label for="image">Image:</label>
-                  <input type="file" id="image" name="image" accept="image/*">
-                
-                  <label for="title">Title:</label>
-                  <input type="text" id="title" name="title">
-                
-                  <label for="description">Description:</label>
-                  <textarea name="description"></textarea>
-                
-                  <label for="genre">Genre:</label>
-                  <input type="text" id="genre" name="genre">
-                
-                  <label for="yearFormed">Year Formed:</label>
-                  <input type="number" id="yearFormed" name="yearFormed">
-                
-                  <label for="members">Members:</label>
-                  <input type="text" id="members" name="members">
-                
-                  <label for="website">Website:</label>
-                  <input type="url" id="website" name="website">
-                
-                  <label for="active">Active:</label>
-                  <input type="checkbox" id="active" name="active" checked>
-                
-                  <button type="submit">Create User</button>
-                </form>
-                
+                    <h2>USER INFO</h2>
+                    <div class="accountInfo">
+                        <label for="userName">User Name:</label>
+                        <input type="text" id="userName" name="userName" required>
+                        
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                        
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password">
+                    </div>                       
+                    
 
-                  </form>
+                    <h2>BAND INFO</h2>
+                    <div class="profilePageInfo">           
+                        <label for="title">Band Name:</label>
+                        <input type="text" id="title" name="title">
+                        
+                        <label for="description" class="description">Description:</label>
+                        <textarea name="description"></textarea>
+                        
+                        <label for="genre">Genre:</label>
+                        <input type="text" id="genre" name="genre">
+                        
+                        <label for="yearFormed">Year Formed:</label>
+                        <input type="number" id="yearFormed" name="yearFormed">
+                        
+                        <label for="members">Members:</label>
+                        <input type="text" id="members" name="members">
+
+                        <label for="image">Image:</label>
+                        <input type="file" class="signupImage" id="image" name="image" accept="image/*">
+                        
+                        <label for="website">Website:</label>
+                        <input type="url" id="website" name="website">
+                        
+                        <label for="active">Are You Active?</label>
+                        <input type="checkbox" class="active" id="active" name="active" checked>
+                    </div>
+                    <h2>BAND SOCIALS</h2>
+                    <div class="socials">
+                        
+                        <label for="spotify">Spotify</label>
+                        <input type="url" id="spotify" name="spotify">
+                        
+                        <label for="soundcloud">Soundcloud</label>
+                        <input type="url" id="soundcloud" name="soundcloud">
+                        
+                        <label for="tidal">Tidal</label>
+                        <input type="url" id="tidal" name="tidal">
+                        
+                        <label for="instagram">Instagram</label>
+                        <input type="url" id="instagram" name="instagram">
+                        
+                        <label for="tiktok">TikTok</label>
+                        <input type="url" id="tiktok" name="tiktok">
+                        
+                        <label for="twitter">Twitter</label>
+                        <input type="url" id="twitter" name="twitter">
+                        
+                        <label for="snapchat">Snapchat</label>
+                        <input type="url" id="snapchat" name="snapchat">
+                        
+                        <label for="facebook">Facebook</label>
+                        <input type="url" id="facebook" name="facebook">
+                    </div>
+
+                  <button type="submit" class="createUserButton">Create User</button>
+
+                </form>
 
         </div>
 </div>

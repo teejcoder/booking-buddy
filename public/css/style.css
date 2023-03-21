@@ -363,8 +363,14 @@ body {
 }
 
 input, textarea {
-  font-family: 'Mabry pro', sans-serif;
-  background-color :#fef4cc;
+  height: 50px;
+  width: 200px;
+  border: 0;
+  border: 2px solid black;
+  background-color: #ffc900;
+  text-align: center;
+  margin: 20px;
+  box-shadow: 10px 10px #ff00b5;
 }
 
 button, .btn, .btn-primary {
@@ -373,11 +379,9 @@ button, .btn, .btn-primary {
   padding: 12px 24px;
   border-radius: 25px;
   border: 2px solid black;
-  background-color: #ffc900;
+  background-color: #ff00b5;
   cursor: pointer;
 }
-
-
 
 /*************************************************************************************************/
 /*
@@ -391,7 +395,11 @@ button, .btn, .btn-primary {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #ff00b5;
+}
 
+#exampleInputEmail1, #exampleInputPassword1{
+  border: 2px solid black;
 }
 
 .indexLandingForm {
@@ -404,6 +412,7 @@ button, .btn, .btn-primary {
   flex-direction: column;
   justify-content: center;
   align-content: center;
+  background-color: #ffc900;
 }
 
 .indexLandingImg {
@@ -543,6 +552,7 @@ img .img-fluid {
 **       /PROFILE
 */
 /*************************************************************************************************/
+
 .profileBanner {
   display: flex;
   justify-content: space-between;
@@ -570,14 +580,15 @@ img .img-fluid {
   align-items: center;
   justify-content: flex-start ;
   border-bottom: 4px solid black;
-  background-color:  rgb(240 150 228);
+  background-color: #ff90e8;
   width: 100%;
 }
 
 .profileFirst > h1 {
   font-size: 200px;
   height: 100%;
-  width: 100px;
+  width: 100%; 
+  /* width: 100px;  */
   z-index: 999;
 }
 
@@ -605,7 +616,7 @@ img .img-fluid {
   display: flex;
   align-items: center;
   justify-content: right;
-  background-color: #00ffc9;
+  background-color: rgb(240 150 228);
 }
 
 .profileSecondLeft > .mainImage {
@@ -616,15 +627,17 @@ img .img-fluid {
 }
 
 .profileSecondRight {
+  display: flex;
   height: 80%;
   width: 40%;
   border: 2px solid black;
+
+
 }
 
 .profilePieces {
   height: 100%;
   width: 100%;
-
 }
 
 .profileMembersGenre {
@@ -641,6 +654,7 @@ img .img-fluid {
   justify-content: center;
   height: 100%;
   width: 70%;
+  padding: 15px;
 }
 
 .profileGenreAndYear {
@@ -650,6 +664,7 @@ img .img-fluid {
   align-items: center;
   justify-content: start;
   flex-direction: column;
+  border: 1px solid black;
 }
 
 .profileGenre{
@@ -659,6 +674,7 @@ img .img-fluid {
   justify-content: center;
   width: 100%;
   height: 100%;
+
 }
 .profileYearFormed {
   display: flex;
@@ -666,8 +682,26 @@ img .img-fluid {
   justify-content: center;
   width: 100%;
   height: 100%;
+  border: 1px solid black;
+  background-color: #ffd63f;
 }
 
+
+
+.profileBio {
+  height: 20%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  display: flex;
+  align-items: center;  
+  justify-content: center;
+}
+.profileBio > p {
+  padding: px;
+}
 
 
 
@@ -675,6 +709,7 @@ img .img-fluid {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 25px;
 }
 
 
@@ -744,20 +779,79 @@ img .img-fluid {
 /*************************************************************************************************/
 
 .signupPage {
+  height: 100%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #ff00b5;
 }
-.signupFormContainer > form {
-  height: 750px;
-  width: 500px;
-  border: 5px solid pink;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+
+.signupFormContainer {
   margin: 50px 0px;
+  height: 90%;
+  width: 70%;
+  text-align: center;
+  display: flex;
+
+  background-color: #ffc900;
+
+  border: 2px solid black;
+  border-radius: 75px;
+  box-shadow: 15px 15px black;
+  
 }
+
+
+.accountInfo {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid black;
+  padding-bottom: 30px;
+  gap: 0px 10px;
+}
+
+.profilePageInfo {
+  width: 100%;
+  border-bottom: 2px solid black;
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+}
+
+.socials {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0px 10px;
+}
+
+input::file-selector-button {
+  background-color: #ffc900;
+  border: none;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.active {
+  height: 30px;
+  box-shadow: none;
+}
+
+.createUserButton {
+  background-color: #ff00b5;
+  margin: 50px;
+}
+
 
 /*************************************************************************************************/
 /*
@@ -770,6 +864,7 @@ img .img-fluid {
   justify-content: center;
   align-items: center;
   margin: 30px 0px;
+  text-align: center;
 }
 
 

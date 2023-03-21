@@ -13,7 +13,6 @@ const UserSchema = new mongoose.Schema({
 
   password: String,
 
-
   image: {
     type: String, 
     unique: true,
@@ -53,7 +52,42 @@ const UserSchema = new mongoose.Schema({
   updatedAt: {
     type: Date,
     default: Date.now
-  }
+  },
+
+  // SOCIALS FOR PROFILE PAGE
+
+  spotify: {
+    type: String,
+    required: false
+  },
+  soundcloud: {
+    type: String,
+    required: false
+  },
+  tidal: {
+    type: String,
+    required: false
+  },
+  instagram: {
+    type: String,
+    required: false
+  },
+  tiktok: {
+    type: String,
+    required: false
+  },
+  twitter: {
+    type: String,
+    required: false
+  },
+  snapchat: {
+    type: String,
+    required: false
+  },
+  facebook: {
+    type: String,
+    required: false
+  },
 });
 
 // Password hash middleware.

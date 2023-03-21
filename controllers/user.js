@@ -8,21 +8,28 @@ module.exports = {
   createUser: async (req, res) => {
     try {
       // Upload image to cloudinary
-      const res = await cloudinary.uploader.upload(req.file.path);
+      const result = await cloudinary.uploader.upload(req.file.path);
       
       await User.create({
         userName: req.body.userName,
         email: req.body.email,
         password: req.body.password,
-        image: res.secure_url,
-        cloudinaryId: res.public_id,
+        image: result.secure_url,
+        cloudinaryId: result.public_id,
         title: req.body.title,
         description: req.body.description,
         genre: req.body.genre,
         yearFormed: req.body.yearFormed,
         members: req.body.members,
         website: req.body.website,
-
+        spotify: req.body.spotify,
+        soundcloud: req.body.soundcloud,
+        tidal: req.body.tidal,
+        instagram: req.body.instagram,
+        tiktok: req.body.tiktok,
+        twitter: req.body.twitter,
+        snapchat: req.body.snapchat,
+        facebook: req.body.facebook,
       });
 
       res.status(201).send('User created successfully');
@@ -37,7 +44,7 @@ module.exports = {
   getUser: async (req, res) => {
     try {
       const user = await User.find({ user: req.user.id });
-      res.render("profile.ejs", { user: user });
+      res.render("profile.ejs", { user: req.user });
     } catch (err) {
       console.log(err);
     }
