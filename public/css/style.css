@@ -38,9 +38,12 @@
    * `article` contexts in Chrome, Firefox, and Safari.
    */
   
-  h1 {
+  h1, h2, h3 {
     font-size: 2em;
-    margin: 0.67em 0;
+    font-family: 'Abril Fatface', cursive;
+  }
+  p {
+    font-family: 'Abril Fatface', cursive;
   }
   
   /* Grouping content
@@ -370,7 +373,7 @@ input, textarea {
   background-color: #ffc900;
   text-align: center;
   margin: 20px;
-  box-shadow: 10px 10px #ff00b5;
+  box-shadow: 10px 10px #FF3EB5;
 }
 
 button, .btn, .btn-primary {
@@ -399,7 +402,7 @@ button, .btn, .btn-primary {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #ff00b5;
+  background-color: #FF3EB5;
 }
 
 #exampleInputEmail1, #exampleInputPassword1{
@@ -610,7 +613,7 @@ img .img-fluid {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  background-color: #ff00b5;
+  background-color: #FF3EB5;
   border-top: 5px solid black;
   border-bottom: 5px solid black;
 }
@@ -621,7 +624,8 @@ img .img-fluid {
   border: 2px solid black;
   display: flex;
   align-items: center;
-  justify-content: right;
+  justify-content: center;
+  flex-direction: column;
   background-color: #ffc900;
   box-shadow: 15px 15px black;
 }
@@ -701,6 +705,7 @@ img .img-fluid {
 }
 
 
+/* PROFILE BIO */
 
 .profileBio {
   height: 20%;
@@ -708,14 +713,19 @@ img .img-fluid {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 15px;
+  flex-direction: column;
+
+} 
+/* BIO TITLE */
+.profileBio > h2{
+  height: 20%;
+  width: 100%;
   display: flex;
-  align-items: center;  
+  align-items: start;
   justify-content: center;
+  flex-direction: column;
 }
-.profileBio > p {
-  padding: px;
-}
+
 
 
 /* BUTTON LINKS ON /PROFILE */
