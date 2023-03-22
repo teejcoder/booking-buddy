@@ -42,8 +42,8 @@
     font-size: 2em;
     font-family: 'Abril Fatface', cursive;
   }
-  p {
-    font-family: 'Abril Fatface', cursive;
+  p, li, ul, .btn, label {
+    font-family: 'Abril Fatface';
   }
   
   /* Grouping content
@@ -373,11 +373,11 @@ input, textarea {
   background-color: #ffc900;
   text-align: center;
   margin: 20px;
-  box-shadow: 10px 10px #FF3EB5;
+  box-shadow: 10px 10px #ff00b5;
 }
 
 button, .btn, .btn-primary {
-  height: 25px;
+  height: 50px;
   width: 75px;
   padding: 12px 24px;
   margin: 15px;
@@ -651,12 +651,13 @@ img .img-fluid {
   align-items: center;  
   justify-content: space-evenly;
   flex-direction: column;
-  padding: 10px;
 }
 
 .profilePieces {
   height: 100%;
   width: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 .profileMembersGenre {
@@ -671,8 +672,18 @@ img .img-fluid {
   display: flex;
   align-items: center;  
   justify-content: center;
+  flex-direction: column;
   height: 100%;
-  width: 70%;
+  width: 60%;
+}
+
+ul, li{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .profileGenreAndYear {
@@ -709,12 +720,11 @@ img .img-fluid {
 
 .profileBio {
   height: 20%;
-  width: 100%;
+  width: 80%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-
 } 
 /* BIO TITLE */
 .profileBio > h2{
@@ -831,7 +841,7 @@ img .img-fluid {
 
 
 .accountInfo {
-  width: 100%;
+
   padding: 10px;
   display: flex;
   align-items: center;
@@ -842,7 +852,7 @@ img .img-fluid {
 }
 
 .profilePageInfo {
-  width: 100%;
+
   border-bottom: 2px solid black;
   padding-bottom: 30px;
   display: flex;
@@ -853,7 +863,7 @@ img .img-fluid {
 }
 
 .socials {
-  width: 100%;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -862,11 +872,12 @@ img .img-fluid {
 }
 
 input::file-selector-button {
-  background-color: #ffc900;
+  background-color: #75ff00;
   border: none;
   width: 100%;
   height: 100%;
   cursor: pointer;
+  font-family: 'Abril Fatface', cursive;
 }
 
 .active {
@@ -875,9 +886,14 @@ input::file-selector-button {
 }
 
 .createUserButton {
-  background-color: #ff00b5;
+  background-color: #75ff00;
   margin: 50px;
+  width: 10%;
+  padding: 12px 24px;
+  
 }
+
+
 
 
 /*************************************************************************************************/
