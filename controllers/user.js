@@ -43,8 +43,8 @@ module.exports = {
   // Get user
   getUser: async (req, res) => {
     try {
-      const user = await User.find({ user: req.user.id });
-      res.render("profile.ejs", { user: req.user });
+      const user = await User.find().sort({  user: req.user.id }).lean();
+      res.render("profile.ejs", { user: user });
     } catch (err) {
       console.log(err);
     }
@@ -53,9 +53,8 @@ module.exports = {
   // Get all users
   getAllUsers: async (req, res) => {
     try {
-      const users = await User.find({});
-
-      res.render('users', { users });
+      const user = await User.find();
+      res.render('feed.ejs', { user });
     } catch (error) {
       console.error(error);
       res.status(500).send('Error retrieving users');

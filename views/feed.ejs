@@ -2,18 +2,18 @@
 
   <div class="feedContainer">
 
-    <ul class="feedGrid">
-      <% for(var i=0; i<posts.length; i++) {%>
-        <li class="feedLi">
-          <a href="/post/<%= posts[i]._id%>">
-          <!-- <a href="/post/<%= posts[i]._id%>">   -->
-            <img class="img-fluid" src="<%= posts[i].image%>">
-            <!-- <p class="img-fluid" src="<%= posts[i].image%>"> -->
-          </a>
-         </li>
-      <% } %>
-      </ul>
+      <% if (Array.isArray(user)) { %>
+        <% user.forEach(function(user) { %>
 
+          <div class="userProfile">
+            <h3><%= user.userName %></h3>
+            <img src="<%= user.image %>" class="feedImg" alt="Profile Picture">
+            <span><%= user.genre %></span>
+          </div>
+
+        <% }); %>
+      <% } %>
+    
   </div>
 
 <%- include('partials/footer') -%>
