@@ -5,12 +5,13 @@
       <% if (Array.isArray(user)) { %>
         <% user.forEach(function(user) { %>
 
-          <div class="userProfile">
+          <a href="/profile/<%= user._id %>" class="userProfile"> 
+            <!-- anchor tag starts here -->
             <h3><%= user.userName %></h3>
             <img src="<%= user.image %>" class="feedImg" alt="Profile Picture">
-            <span><%= user.genre %></span>
-          </div>
-
+            <p><%= user.genre %></p>
+          </a> <!-- anchor tag ends here -->
+          
         <% }); %>
       <% } %>
     

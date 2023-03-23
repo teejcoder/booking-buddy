@@ -71,6 +71,7 @@ module.exports = {
       }
 
       res.render('user', { user });
+      res.redirect(`/profile/${req.body.id}`)
     } catch (error) {
       console.error(error);
       res.status(500).send('Error retrieving user');
