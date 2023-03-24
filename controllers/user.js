@@ -70,7 +70,7 @@ module.exports = {
         return res.status(404).send('User not found');
       }
 
-      res.render('user', { user });
+      res.render('user', { user:_id });
       res.redirect(`/profile/${req.body.id}`)
     } catch (error) {
       console.error(error);

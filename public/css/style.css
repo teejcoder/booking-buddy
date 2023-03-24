@@ -23,6 +23,7 @@
   
   body {
     margin: 0;
+    padding: 0;
   }
   
   /**
@@ -40,11 +41,9 @@
   
   h1, h2, h3 {
     font-size: 2em;
-    font-family: 'Abril Fatface', cursive;
+
   }
-  p, li, ul, .btn, label {
-    font-family: 'Abril Fatface';
-  }
+
   
   /* Grouping content
      ========================================================================== */
@@ -374,7 +373,7 @@ input, textarea {
   background-color: #ffc900;
   text-align: center;
   margin: 20px;
-  box-shadow: 10px 10px #ff00b5;
+  box-shadow: 10px 10px black;
 }
 
 button, .btn, .btn-primary {
@@ -384,7 +383,7 @@ button, .btn, .btn-primary {
   margin: 15px;
   border-radius: 25px;
   border: 2px solid black;
-  background-color: #ff00b5;
+  background-color: #fef2c1;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -403,7 +402,7 @@ button, .btn, .btn-primary {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #FF3EB5;
+  background-color: #fef2c1;
 }
 
 #exampleInputEmail1, #exampleInputPassword1{
@@ -520,7 +519,7 @@ a h1 {
 /*************************************************************************************************/
 
 .feedContainer {
-  background-color: #FF3EB5;
+  background-color: #fef2c1;
   padding: 50px 20%;
   display: flex;
   justify-content: space-between;
@@ -541,12 +540,16 @@ a h1 {
   flex-direction: column;
   box-shadow: 10px 10px black;
 }
+.userProfile:hover{
+  --tw-translate-y: 0px;
+  transform: translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
 
 .userProfile > img{
   height: 180px;
   width: 180px;  
   border: 4px solid black;
-  box-shadow: 5px 5px #ff00b5;
+  box-shadow: 5px 5px black;
   margin: 5%;
 }
 
@@ -623,7 +626,7 @@ li {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  background-color: #FF3EB5;
+  background-color: #fef2c1;
   border-top: 5px solid black;
   border-bottom: 5px solid black;
 }
@@ -723,7 +726,7 @@ ul, li{
   width: 100%;
   height: 100%;
   border: 1px solid black;
-  background-color: #ff00b5;
+  background-color: #fef2c1;
 }
 
 
@@ -832,7 +835,7 @@ ul, li{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #ff00b5;
+  background-color: #fef2c1;
 }
 
 .signupFormContainer {

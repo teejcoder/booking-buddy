@@ -13,12 +13,6 @@ router.post('/createUser', upload.single('image'), userController.createUser);
 // Get all users
 router.get('/getAllUsers', userController.getAllUsers);
 
-// Get a specific user
-router.get('/getUserById', userController.getUserById);
-
-// Get logged in user
-router.get('/getUser/:id', ensureAuth, userController.getUser);
-
 // Update a user
 router.put('/updateUser/:id', ensureAuth, userController.updateUser);
 
