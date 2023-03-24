@@ -43,8 +43,8 @@ module.exports = {
   // Get user
   getUser: async (req, res) => {
     try {
-      const user = await User.find().sort({  user: req.user.id }).lean();
-      res.render("profile.ejs", { user: user });
+      const user = await User.find(req.user.id).sort({  user: req.user.id }).lean();
+      res.render("profile.ejs", { user: req.user });
     } catch (err) {
       console.log(err);
     }
@@ -60,23 +60,19 @@ module.exports = {
       res.status(500).send('Error retrieving users');
     }
   },
-
-  // Get a specific user
-  getUserById: async (req, res) => {
-    try {
-      const user = await User.findById(req.params.id);
-
-      if (!user) {
-        return res.status(404).send('User not found');
-      }
-
-      res.render('user', { user:_id });
-      res.redirect(`/profile/${req.body.id}`)
-    } catch (error) {
-      console.error(error);
-      res.status(500).send('Error retrieving user');
+// Get user by ID
+getUserById: async (req, res) => {
+  try {
+    const user = await User.findById(req.params.id);
+    if (!user) {
+      return res.status(404).send('User not found');
     }
-  },
+    res.render('profile.ejs', { user });
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Error retrieving user');
+  }
+},
 
   // Update a user
   updateUser: async (req, res) => {

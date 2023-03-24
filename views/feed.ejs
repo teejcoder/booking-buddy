@@ -1,20 +1,20 @@
 <%- include('partials/header') -%>
 
-  <div class="feedContainer">
+<div class="feedContainer">
 
-      <% if (Array.isArray(user)) { %>
-        <% user.forEach(function(user) { %>
+  <% if (Array.isArray(user)) { %>
+    <% user.forEach(function(user) { %>
 
-          <a href="/profile/<%= user._id %>" class="userProfile"> 
-            <!-- anchor tag starts here -->
-            <h3><%= user.userName %></h3>
-            <img src="<%= user.image %>" class="feedImg" alt="Profile Picture">
-            <p><%= user.genre %></p>
-          </a> <!-- anchor tag ends here -->
-          
-        <% }); %>
-      <% } %>
-    
-  </div>
+      <a href="/profile/<%= user._id %>" class="userProfile"> 
+        <!-- anchor tag starts here -->
+        <h3><%= user.userName %></h3>
+        <img src="<%= user.image %>" class="feedImg" alt="Profile Picture">
+        <p><%= user.genre %></p>
+      </a> <!-- anchor tag ends here -->
+      
+    <% }); %>
+  <% } %>
+
+</div>
 
 <%- include('partials/footer') -%>

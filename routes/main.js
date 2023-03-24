@@ -11,7 +11,7 @@ router.get("/", homeController.getIndex);
 router.get("/profile", ensureAuth, postsController.getProfile);
 
 // Get a specific user
-router.get('/profile/:_id', userController.getUserById);
+router.get('/profile/:id', userController.getUserById);
 router.get("/feed", userController.getAllUsers);
 router.get("/login", authController.getLogin);
 router.post("/login", authController.postLogin);
