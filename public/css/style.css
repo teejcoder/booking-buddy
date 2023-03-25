@@ -474,7 +474,7 @@ a h1 {
 
 .navbar {
     height: 100px;
-    background-color: #ffc900;
+    background-color: #ff90e8;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -493,7 +493,7 @@ a h1 {
 }
 
 .footer {
-  background-color: #ffc900;
+  background-color: #ff90e8;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -621,6 +621,7 @@ li {
 
 .hero {
   height: 1050px;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
