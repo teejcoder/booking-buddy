@@ -4,6 +4,7 @@
 <html>
   <head>
     <link rel="stylesheet" href="/css/style.css" />
+    
     <title><%= user.userName %></title>
   </head>
   <body>
@@ -103,14 +104,20 @@
                   <% } %>
                 </div>                
 
-                <!-- tidal -->
-                <div class="btn btn-primary profileTidalButton">
-                  <% if (user.tidal) { %>
-                    <a href="<%=user.tidal%>" target="_blank">Tidal</a>
+                <!-- apple music -->
+                <div class="btn btn-primary profileAppleMusicButton">
+                  <% if (user.appleMusic) { %>
+                    <a href="<%=user.appleMusic%>" target="_blank"><i class="fa-brands fa-apple"></i></a>
                   <% } %>
                 </div>
 
 
+                <!-- youtube -->
+                <div class="btn btn-primary profileYoutubeButton">
+                  <% if (user.youtube) { %>
+                    <a href="<%=user.youtube%>" target="_blank">YouTube</a>
+                  <% } %>
+                </div>                
               </div>
 
 

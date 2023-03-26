@@ -64,7 +64,7 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: false
   },
-  tidal: {
+  appleMusic: {
     type: String,
     required: false
   },
@@ -80,7 +80,7 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: false
   },
-  snapchat: {
+  youtube: {
     type: String,
     required: false
   },

@@ -24,16 +24,16 @@ module.exports = {
         website: req.body.website,
         spotify: req.body.spotify,
         soundcloud: req.body.soundcloud,
-        tidal: req.body.tidal,
+        appleMusic: req.body.appleMusic,
         instagram: req.body.instagram,
         tiktok: req.body.tiktok,
         twitter: req.body.twitter,
-        snapchat: req.body.snapchat,
+        youtube: req.body.youtube,
         facebook: req.body.facebook,
       });
 
       res.status(201).send('User created successfully');
-      res.render("/profile");
+      res.redirect("/profile");
     } catch (error) {
       console.error(error);
       res.status(500).send('Error creating user');
