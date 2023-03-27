@@ -63,61 +63,61 @@
               <div class="buttonLinks">
 
                 <!-- website -->
-                <div class="btn btn-primary profileWebsiteButton">
+                <div class="btn btn-primary profileWebsiteButton" <% if (!user.website) { %>style="display:none"<% } %>>
                   <% if (user.website) { %>
                     <a href="<%=user.website%>" target="_blank"> Website</a>
                   <% } %>
                 </div>
 
                 <!-- tiktok -->
-                <div class="btn btn-primary profileTiktokButton">
+                <div class="btn btn-primary profileTiktokButton" <% if (!user.tiktok) { %>style="display:none"<% } %>>
                   <% if (user.tiktok) { %>
                     <a href="<%=user.tiktok%>" target="_blank">Tiktok</a>
                   <% } %>
                 </div>                
-                
+
                 <!-- instagram -->
-                <div class="btn btn-primary profileInstagramButton">
+                <div class="btn btn-primary profileInstagramButton" <% if (!user.instagram) { %>style="display:none"<% } %>>
                   <% if (user.instagram) { %>
                     <a href="<%=user.instagram%>" target="_blank">Instagram</a>
                   <% } %>
                 </div>
 
                 <!-- facebook -->
-                <div class="btn btn-primary profileFacebookButton">
+                <div class="btn btn-primary profileFacebookButton" <% if (!user.facebook) { %>style="display:none"<% } %>>
                   <% if (user.facebook) { %>
                     <a href="<%=user.facebook%>" target="_blank">Facebook</a>
                   <% } %>
                 </div>
-                
+
                 <!-- spotify -->
-                <div class="btn btn-primary profileSpotifyButton">
+                <div class="btn btn-primary profileSpotifyButton" <% if (!user.spotify) { %>style="display:none"<% } %>>
                   <% if (user.spotify) { %>
                     <a href="<%=user.spotify%>" target="_blank">Spotify</a>
                   <% } %>
                 </div>                
 
                 <!-- soundcloud -->
-                <div class="btn btn-primary profileSoundcloudButton">
+                <div class="btn btn-primary profileSoundcloudButton" <% if (!user.soundcloud) { %>style="display:none"<% } %>>
                   <% if (user.soundcloud) { %>
                     <a href="<%=user.soundcloud%>" target="_blank">Soundcloud</a>
                   <% } %>
                 </div>                
 
                 <!-- apple music -->
-                <div class="btn btn-primary profileAppleMusicButton">
+                <div class="btn btn-primary profileAppleMusicButton" <% if (!user.appleMusic) { %>style="display:none"<% } %>>
                   <% if (user.appleMusic) { %>
-                    <a href="<%=user.appleMusic%>" target="_blank"><i class="fa-brands fa-apple"></i></a>
+                    <a href="<%=user.appleMusic%>" target="_blank">Apple</a>
                   <% } %>
                 </div>
 
-
                 <!-- youtube -->
-                <div class="btn btn-primary profileYoutubeButton">
+                <div class="btn btn-primary profileYoutubeButton" <% if (!user.youtube) { %>style="display:none"<% } %>>
                   <% if (user.youtube) { %>
                     <a href="<%=user.youtube%>" target="_blank">YouTube</a>
                   <% } %>
                 </div>                
+            
               </div>
 
 
