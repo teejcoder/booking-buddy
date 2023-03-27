@@ -383,13 +383,25 @@ button, .btn, .btn-primary {
   margin: 15px;
   border-radius: 25px;
   border: 2px solid black;
-  box-shadow: 5px 5px black;
   background-color: #fef2c1;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  -webkit-transition: background-color ,padding 1s ease-out;
+  -moz-transition: background-color,padding  1s ease-out;
+  -o-transition: background-color,padding  1s ease-out;
+  transition: background-color,padding  1s ease-out
 }
+
+.btn:hover{
+  background-color: pink;
+  box-shadow: 5px 5px black;
+  padding-bottom: 20px;
+  padding-left: 20px;
+}
+
+
 
 /*************************************************************************************************/
 /*
@@ -700,14 +712,14 @@ ul, li{
 }
 
 .profileGenreAndYear {
-  width: 80%;
+  width: 70%;
   height: 120px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
   border-radius: 25px;
-  margin: 10px;
+  margin: 8px;
 }
 
 .profileGenre{
@@ -768,11 +780,7 @@ ul, li{
   flex-wrap: wrap;
   height: 10%;
   width: 100%;
-
 }
-
-
-
 
 .profilePostBoxContainer {
   display: flex;
