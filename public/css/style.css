@@ -359,11 +359,18 @@
 */
 /*************************************************************************************************/
 
+
+:root {
+  --profile-colors: #90a8ed, #000000, #fcc900, #ffffff,  rgb(240, 150, 228), rgb(75,158,148);
+}
+
 body {
     font-family: 'Mabry pro', sans-serif;
-    background-color: #ff4900;
+    background-color: white;
     height: 100%;
 }
+
+
 
 input, textarea {
   height: 50px;
@@ -374,6 +381,20 @@ input, textarea {
   text-align: center;
   margin: 20px;
   box-shadow: 10px 10px black;
+}
+
+
+a {
+  color: black;
+  text-decoration: none;
+  list-style-type: none;
+  font-weight: 400;
+  -webkit-transition: background-color, font-style, 0.1s ease-out;
+  -moz-transition: background-color, font-style, 0.1s ease-out;
+  -o-transition: background-color, font-style, 0.1s ease-out;
+  transition: background-color, font-style, 0.1s ease-out;
+} a:hover{
+  color: white;
 }
 
 button, .btn, .btn-primary {
@@ -388,18 +409,13 @@ button, .btn, .btn-primary {
   display: flex;
   align-items: center;
   justify-content: center;
-
-  -webkit-transition: background-color, 1s ease-out;
-  -moz-transition: background-color, 1s ease-out;
-  -o-transition: background-color, 1s ease-out;
-  transition: background-color, 1s ease-out;
-  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 140ms cubic-bezier(.25, .46, .45, .94);
 }
-
 .btn:hover{
   background-color:#ffc900;
   box-shadow: 5px 5px black;
 }
+
 
 
 
@@ -473,20 +489,6 @@ button, .btn, .btn-primary {
 */
 /*************************************************************************************************/
 
-a {
-  color: black;
-  text-decoration: none;
-  list-style-type: none;
-  font-weight: 400;
-  -webkit-transition: background-color, font-style, 0.1s ease-out;
-  -moz-transition: background-color, font-style, 0.1s ease-out;
-  -o-transition: background-color, font-style, 0.1s ease-out;
-  transition: background-color, font-style, 0.1s ease-out;
-} a:hover{
-  background-color:inherit;
-  text-decoration: underline;
-}
-
 a h1 {
   font-weight: 400;
   font-size: 35px;
@@ -494,7 +496,7 @@ a h1 {
 
 .navbar {
     height: 100px;
-    background-color: #ff4900;
+    background-color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -513,13 +515,15 @@ a h1 {
 }
 
 .footer {
-  background-color: #ff4900;
+  background-color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100px;
   padding: 10px 30px;
   border-top: 4px solid black;
+}.footer>a:hover {
+  color: white;
 }
 
 
@@ -536,11 +540,15 @@ a h1 {
   justify-content: center;
   align-items: center;
 }
+  /* Set the background color to a randomly selected color from the array */
 
 .userProfile {
   border: 3px solid black;
   color: black;
-  background-color: #ffc900;
+  background-color: var(--profile-colors);
+  clear: both;
+  /* Add overflow:hidden to prevent the background color from bleeding outside of the container */
+  overflow: hidden;
   margin: 0px 20px;
   padding: 10px;
   height: 320px;
@@ -550,7 +558,13 @@ a h1 {
   align-items: center;
   flex-direction: column;
   box-shadow: 10px 10px black;
+}.userProfile:hover {
+  border-radius: 50px;
+  box-shadow: 5px 5px black;
+  background-color: #ff4900;
+  color: white;
 }
+
 
 .userProfile > img{
   height: 160px;
