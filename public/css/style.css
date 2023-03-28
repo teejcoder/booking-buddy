@@ -388,17 +388,17 @@ button, .btn, .btn-primary {
   display: flex;
   align-items: center;
   justify-content: center;
-  -webkit-transition: background-color ,padding 1s ease-out;
-  -moz-transition: background-color,padding  1s ease-out;
-  -o-transition: background-color,padding  1s ease-out;
-  transition: background-color,padding  1s ease-out
+
+  -webkit-transition: background-color, 1s ease-out;
+  -moz-transition: background-color, 1s ease-out;
+  -o-transition: background-color, 1s ease-out;
+  transition: background-color, 1s ease-out;
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .btn:hover{
-  background-color: pink;
+  background-color:#ffc900;
   box-shadow: 5px 5px black;
-  padding-bottom: 20px;
-  padding-left: 20px;
 }
 
 
@@ -477,7 +477,14 @@ a {
   color: black;
   text-decoration: none;
   list-style-type: none;
-    font-weight: 400;
+  font-weight: 400;
+  -webkit-transition: background-color, font-style, 0.1s ease-out;
+  -moz-transition: background-color, font-style, 0.1s ease-out;
+  -o-transition: background-color, font-style, 0.1s ease-out;
+  transition: background-color, font-style, 0.1s ease-out;
+} a:hover{
+  background-color:inherit;
+  text-decoration: underline;
 }
 
 a h1 {
@@ -513,15 +520,6 @@ a h1 {
   height: 100px;
   padding: 10px 30px;
   border-top: 4px solid black;
-
-}
-.userNameFooter{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 130px;
-  margin: 0;
-  background-color: #ffc900;
 }
 
 
@@ -594,12 +592,6 @@ li {
   flex-direction: column;
 }
 
-
-
-
-/*
-**      STICKY USERNAME AT THE TOP
-*/
 
 .profileFirst {
   height: 300px;
