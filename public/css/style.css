@@ -366,18 +366,16 @@
 
 body {
     font-family: 'Mabry pro', sans-serif;
-    background-color: white;
+    background-color: #fef2c1;
     height: 100%;
 }
-
-
 
 input, textarea {
   height: 50px;
   width: 200px;
   border: 0;
   border: 2px solid black;
-  background-color: #ffc900;
+  background-color: white;
   text-align: center;
   margin: 20px;
   box-shadow: 10px 10px black;
@@ -496,12 +494,12 @@ a h1 {
 
 .navbar {
     height: 100px;
-    background-color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 30px;
     border-bottom: 4px solid black;
+    background-color: #fef2c1;
 }
 
 .userNameHeader {
@@ -515,7 +513,7 @@ a h1 {
 }
 
 .footer {
-  background-color: white;
+  background-color: #fef2c1;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -523,7 +521,7 @@ a h1 {
   padding: 10px 30px;
   border-top: 4px solid black;
 }.footer>a:hover {
-  color: white;
+  color:springgreen ;
 }
 
 
@@ -534,22 +532,21 @@ a h1 {
 /*************************************************************************************************/
 
 .feedContainer {
-  background-color: #fef2c1;
-  padding: 80px 250px;
+  padding: 80px 150px;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 80%;
+  flex-wrap: wrap;
+  background-color: white;
 }
-  /* Set the background color to a randomly selected color from the array */
+
+  /* USERS ON FEED */
 
 .userProfile {
   border: 3px solid black;
   color: black;
-  background-color: var(--profile-colors);
-  clear: both;
-  /* Add overflow:hidden to prevent the background color from bleeding outside of the container */
-  overflow: hidden;
-  margin: 0px 20px;
+  margin: 20px;
   padding: 10px;
   height: 320px;
   width: 320px;
@@ -558,18 +555,51 @@ a h1 {
   align-items: center;
   flex-direction: column;
   box-shadow: 10px 10px black;
-}.userProfile:hover {
+  background-color: white;
+}
+.userProfile:hover {
   border-radius: 50px;
   box-shadow: 5px 5px black;
-  background-color: #ff4900;
-  color: white;
+  background-color: #fcdf68;
+  color: black;
 }
+
+.userProfile:nth-child(1){
+  background-color: #fc67cf;
+  color: black;
+  box-shadow: 5px 5px black;
+}.userProfile:nth-child(1):hover{
+  border-radius: 50px;
+  box-shadow: 5px 5px black;
+  background-color: #fcdf68;
+}
+
+.userProfile:nth-child(3){
+  background-color: #fc6785;
+}.userProfile:nth-child(3):hover{
+  border-radius: 50px;
+  box-shadow: 5px 5px black;
+  background-color: #fcdf68;
+}
+
+.userProfile:nth-child(5){
+  background-color: black;
+  color: black;
+  box-shadow: 5px 5px black;
+}.userProfile:nth-child(5):hover{
+  border-radius: 50px;
+  box-shadow: 5px 5px black;
+  background-color: #fcdf68;
+}
+
+
+
 
 
 .userProfile > img{
   height: 160px;
   width: 160px;  
-  border: 4px solid black;
+  border: 2px solid black;
   box-shadow: 5px 5px black;
   margin: 5%;
 }
@@ -618,10 +648,8 @@ li {
 }
 
 .profileFirst > h1 {
-  font-size: 200px;
-  height: 100%;
+  font-size: 180px;
   width: 100%; 
-  /* width: 100px;  */
   z-index: 999;
 }
 
@@ -629,7 +657,7 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} 
 
 /*
 **   /PROFILE PIC AND Bio CONTAINER
@@ -642,21 +670,22 @@ li {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  background-color: #fef2c1;
+  background-color: white;
   border-top: 5px solid black;
   border-bottom: 5px solid black;
+  padding: 100px 0px;
 }
 
 .profileSecondLeft {
-  height: 80%;
+  height: 100%;
   width: 40%;
   border: 2px solid black;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-color: #ffc900;
   box-shadow: 15px 15px black;
+  background-color: #c1fef2;
 }
 
 .profileSecondLeft > .mainImage {
@@ -668,10 +697,10 @@ li {
 
 .profileSecondRight {
   display: flex;
-  height: 80%;
+  height: 100%;
   width: 40%;
   border: 2px solid black;
-  background-color: #ff00b5;
+  background-color: #fec1cc;
   box-shadow: 15px 15px black;
 }
 
@@ -681,7 +710,7 @@ li {
   align-items: center;  
   flex-direction: column;
   justify-content: space-evenly;
-  padding: 25px;
+  padding: 0px 25px;
 }
 
 
@@ -699,26 +728,35 @@ li {
   justify-content: center;
   flex-direction: column;
   height: 20%;
+  width: 100%;
 }
 .profileMembers > h2 {
   width: 100%;
+  height: 100%; 
   display: flex;
   align-items: start;  
   justify-content: start;
   font-size: 45px;
 }
 
-ul, li{
+ul {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+li{
   margin: 0;
   padding: 0;
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  justify-content:start;
 }
 
 .profileGenreAndYear {
-  width: 70%;
+  width: 40%;
   height: 120px;
   display: flex;
   align-items: center;
@@ -866,29 +904,28 @@ ul, li{
   width: 1150px;
   text-align: center;
   display: flex;
-
-  background-color: #ffc900;
-
-  border: 2px solid black;
-  border-radius: 75px;
-  box-shadow: 15px 15px black;
-  
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  border-top: 2px solid black;
+  box-shadow: 15px 15px black; 
 }
 
 
-.accountInfo {
 
+.accountInfo {
+  background-color: #90a8ed;
   padding: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-bottom: 2px solid black;
+
   padding-bottom: 30px;
   gap: 0px 10px;
 }
 
 .profilePageInfo {
-
+  background-color: rgb(240, 150, 228);
   border-bottom: 2px solid black;
   padding-bottom: 30px;
   display: flex;
@@ -899,12 +936,14 @@ ul, li{
 }
 
 .socials {
+  background-color: rgb(75,158,148);
   justify-content: space-evenly;
   display: flex;
-
   align-items: center;
   flex-wrap: wrap;
   gap: 0px 10px;
+
+  border-bottom: 4px solid black;
 }
 
 input::file-selector-button {

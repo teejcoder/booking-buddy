@@ -31,7 +31,7 @@ module.exports = {
         youtube: req.body.youtube,
         facebook: req.body.facebook,
       });
-
+      console.log(data)
       res.status(201).send('User created successfully');
       res.redirect("/profile");
     } catch (error) {
