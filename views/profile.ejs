@@ -31,11 +31,13 @@
                 
                   <div class="profilePieces profileMembers">
                     <h2>Members:</h2>
-  
+                    
                     <ul>
-                      <% user.members.forEach(function(member) { %>
-                        <li><%= member %></li>
-                      <% }); %>
+                      <% if (user.members) { %>
+                        <% user.members.forEach(function(member) { %>
+                          <li><%= member %></li>
+                        <% }); %>
+                      <% } %>
                     </ul>
                   </div>
 
@@ -125,8 +127,10 @@
                     </div>
                   </a>            
                   
+
+
                   <div class="buttonLinks">
-                    <a href="/update-user/<%= user._id %>" class="btn btn-primary updateUserInfoButton">Update User Info</a>
+                    <a href="/updateUser" class="btn btn-primary updateUserInfoButton">Update User Info</a>
                   </div>
                   
                 </div>
