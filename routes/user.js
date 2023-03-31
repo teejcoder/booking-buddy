@@ -14,7 +14,10 @@ router.post('/createUser', upload.single('image'), userController.createUser);
 router.get('/getAllUsers', userController.getAllUsers);
 
 // Update a user
-router.put('/updateUser/:id', ensureAuth, userController.updateUser);
+router.put('/update-user/:id', ensureAuth, userController.updateUser);
+
+//handle the PUT request for updating a user
+router.put('/update-user/:id', userController.updateUser);
 
 // Delete a user
 router.delete('/deleteUser/:id', ensureAuth, userController.deleteUser);

@@ -1,0 +1,40 @@
+<%- include('partials/header') -%>
+
+	<h1>Update User Information</h1>
+
+    <div class="updateUserContainer">
+
+        <form method="PUT" action="/user/update-user/<%= user.id %>?_method=PUT">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" value="<%= user.username %>" required><br><br>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" value="<%= user.email %>" required><br><br>
+    
+            <label for="password">New Password:</label>
+            <input type="password" id="password" name="password"><br><br>
+    
+            <label for="confirmPassword">Confirm New Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword"><br><br>
+    
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" value="<%= user.firstName %>"><br><br>
+    
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" value="<%= user.lastName %>"><br><br>
+    
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" value="<%= user.age %>"><br><br>
+    
+            <button type="submit">Update Information</button>
+        </form>
+
+    </div>
+
+
+
+<%- include('partials/footer') -%>
+
+
+
+

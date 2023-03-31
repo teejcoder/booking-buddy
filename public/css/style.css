@@ -567,7 +567,6 @@ a h1 {
 .userProfile:nth-child(1){
   background-color: #fc67cf;
   color: black;
-  box-shadow: 5px 5px black;
 }.userProfile:nth-child(1):hover{
   border-radius: 50px;
   box-shadow: 5px 5px black;
@@ -584,7 +583,7 @@ a h1 {
 
 .userProfile:nth-child(5){
   background-color: black;
-  color: black;
+  color: white;
   box-shadow: 5px 5px black;
 }.userProfile:nth-child(5):hover{
   border-radius: 50px;

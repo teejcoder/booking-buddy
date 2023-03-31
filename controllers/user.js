@@ -74,21 +74,61 @@ getUserById: async (req, res) => {
   }
 },
 
-  // Update a user
-  updateUser: async (req, res) => {
-    try {
-      const user = await User.findByIdAndUpdate(req.params.id, req.body, { new: true });
-
-      if (!user) {
-        return res.status(404).send('User not found');
-      }
-
-      res.status(200).send('User updated successfully');
-    } catch (error) {
-      console.error(error);
-      res.status(500).send('Error updating user');
+// Update user
+updateUser: async (req, res) => {
+  const { id } = req.params;
+  try {
+    const user = await User.findById(id);
+    if (!user) {
+      return res.status(404).send('User not found');
     }
-  },
+    // Check if the user is the owner of the profile being updated
+    if (user.id !== req.user.id) {
+      return res.status(401).send('Unauthorized to update the profile');
+    }
+    const updatedUser = await User.findByIdAndUpdate(
+      id,
+      {
+        title: req.body.title,
+        description: req.body.description,
+        genre: req.body.genre,
+        yearFormed: req.body.yearFormed,
+        members: req.body.members,
+        website: req.body.website,
+        spotify: req.body.spotify,
+        soundcloud: req.body.soundcloud,
+        appleMusic: req.body.appleMusic,
+        instagram: req.body.instagram,
+        tiktok: req.body.tiktok,
+        twitter: req.body.twitter,
+        youtube: req.body.youtube,
+        facebook: req.body.facebook,
+        updatedAt: Date.now()
+      },
+      { new: true }
+    );
+    res.status(200).json(updatedUser);
+    res.render('updateUser.ejs', { user });
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Error updating user');
+  }
+},
+
+// handle the PUT request for updating a user
+ updateUser: async (req, res) => {
+  const userId = req.params.userId;
+  const updatedUser = req.body;
+
+  try {
+    const result = await User.findByIdAndUpdate(userId, updatedUser, { new: true });
+    res.status(200).json(result);
+    res.render('updateUser.ejs', { user });
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+},
+
 
   // Delete a user
   deleteUser: async (req, res) => {

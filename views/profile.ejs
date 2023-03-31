@@ -59,62 +59,76 @@
 
                 <!-- BUTTON LINKS ON /profile -->
                 <div class="buttonLinks">
-
+                  
                   <!-- website -->
-                  <div class="btn btn-primary profileWebsiteButton" <% if (!user.website) { %>style="display:none"<% } %>>
-                    <% if (user.website) { %>
-                      <a href="<%=user.website%>" target="_blank"> Website</a>
-                    <% } %>
-                  </div>
-
+                  <a href="<%=user.website%>" target="_blank">
+                    <div class="btn btn-primary profileWebsiteButton" <% if (!user.website) { %>style="display:none"<% } %>>
+                      <% if (user.website) { %>
+                        Website
+                      <% } %>
+                    </div>
+                  </a>
                   <!-- tiktok -->
-                  <div class="btn btn-primary profileTiktokButton" <% if (!user.tiktok) { %>style="display:none"<% } %>>
-                    <% if (user.tiktok) { %>
-                      <a href="<%=user.tiktok%>" target="_blank">Tiktok</a>
-                    <% } %>
-                  </div>                
-
+                  <a href="<%=user.tiktok%>" target="_blank">
+                    <div class="btn btn-primary profileTiktokButton" <% if (!user.tiktok) { %>style="display:none"<% } %>>
+                      <% if (user.tiktok) { %>
+                        Tiktok
+                      <% } %>
+                    </div>
+                  </a>
                   <!-- instagram -->
-                  <div class="btn btn-primary profileInstagramButton" <% if (!user.instagram) { %>style="display:none"<% } %>>
-                    <% if (user.instagram) { %>
-                      <a href="<%=user.instagram%>" target="_blank">Instagram</a>
-                    <% } %>
-                  </div>
-
+                  <a href="<%=user.instagram%>" target="_blank">
+                    <div class="btn btn-primary profileInstagramButton" <% if (!user.instagram) { %>style="display:none"<% } %>>
+                      <% if (user.instagram) { %>
+                        Instagram
+                      <% } %>
+                    </div>
+                  </a>
                   <!-- facebook -->
-                  <div class="btn btn-primary profileFacebookButton" <% if (!user.facebook) { %>style="display:none"<% } %>>
-                    <% if (user.facebook) { %>
-                      <a href="<%=user.facebook%>" target="_blank">Facebook</a>
-                    <% } %>
-                  </div>
-
+                  <a href="<%=user.facebook%>" target="_blank">
+                    <div class="btn btn-primary profileFacebookButton" <% if (!user.facebook) { %>style="display:none"<% } %>>
+                      <% if (user.facebook) { %>
+                        Facebook
+                      <% } %>
+                    </div>
+                  </a>
                   <!-- spotify -->
-                  <div class="btn btn-primary profileSpotifyButton" <% if (!user.spotify) { %>style="display:none"<% } %>>
-                    <% if (user.spotify) { %>
-                      <a href="<%=user.spotify%>" target="_blank">Spotify</a>
-                    <% } %>
-                  </div>                
-
+                  <a href="<%=user.spotify%>" target="_blank">
+                    <div class="btn btn-primary profileSpotifyButton" <% if (!user.spotify) { %>style="display:none"<% } %>>
+                      <% if (user.spotify) { %>
+                        Spotify
+                      <% } %>
+                    </div>
+                  </a>
                   <!-- soundcloud -->
-                  <div class="btn btn-primary profileSoundcloudButton" <% if (!user.soundcloud) { %>style="display:none"<% } %>>
-                    <% if (user.soundcloud) { %>
-                      <a href="<%=user.soundcloud%>" target="_blank">Soundcloud</a>
-                    <% } %>
-                  </div>                
-
+                  <a href="<%=user.soundcloud%>" target="_blank">
+                    <div class="btn btn-primary profileSoundcloudButton" <% if (!user.soundcloud) { %>style="display:none"<% } %>>
+                      <% if (user.soundcloud) { %>
+                        Soundcloud
+                      <% } %>
+                    </div>
+                  </a>
                   <!-- apple music -->
-                  <div class="btn btn-primary profileAppleMusicButton" <% if (!user.appleMusic) { %>style="display:none"<% } %>>
-                    <% if (user.appleMusic) { %>
-                      <a href="<%=user.appleMusic%>" target="_blank">Apple</a>
-                    <% } %>
-                  </div>
-
+                  <a href="<%=user.appleMusic%>" target="_blank">
+                    <div class="btn btn-primary profileAppleMusicButton" <% if (!user.appleMusic) { %>style="display:none"<% } %>>
+                      <% if (user.appleMusic) { %>
+                        Apple
+                      <% } %>
+                    </div>
+                  </a>
                   <!-- youtube -->
-                  <div class="btn btn-primary profileYoutubeButton" <% if (!user.youtube) { %>style="display:none"<% } %>>
-                    <% if (user.youtube) { %>
-                      <a href="<%=user.youtube%>" target="_blank">YouTube</a>
-                    <% } %>
-                  </div>                
+                  <a href="<%=user.youtube%>" target="_blank">
+                    <div class="btn btn-primary profileYoutubeButton" <% if (!user.youtube) { %>style="display:none"<% } %>>
+                      <% if (user.youtube) { %>
+                        YouTube
+                      <% } %>
+                    </div>
+                  </a>            
+                  
+                  <div class="buttonLinks">
+                    <a href="/update-user/<%= user._id %>" class="btn btn-primary updateUserInfoButton">Update User Info</a>
+                  </div>
+                  
                 </div>
                 
               </div>
