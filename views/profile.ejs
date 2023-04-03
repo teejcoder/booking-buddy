@@ -43,13 +43,23 @@
 
 
                   <div class="profilePieces profileGenreAndYear">
+                    
                     <div class="profilePieces profileYearFormed">
                       <h2>Est: <%= user.yearFormed %></h2>
                     </div>
+
                     <div class="profilePieces profileGenre">
                       <h4><%= user.genre %></h4>
                     </div>
+
+                    <% if( user.id === user.id ) { %>
+                      <div class="profilePieces profileGenre">
+                        <a href="/updateUser"><h4>Update User Info</h4></a>
+                      </div>
+                    <% } %>
+
                   </div>
+
 
                 </div>
 
@@ -126,12 +136,6 @@
                       <% } %>
                     </div>
                   </a>            
-                  
-
-
-                  <div class="buttonLinks">
-                    <a href="/updateUser" class="btn btn-primary updateUserInfoButton">Update User Info</a>
-                  </div>
                   
                 </div>
                 
