@@ -77,15 +77,7 @@ getUserById: async (req, res) => {
 updateUser: async (req, res) => {
   const { id } = req.params;
   try {
-    const user = await User.findById(req.user.id);
-    if (!user) {
-      return res.status(404).send('User not found');
-    }
-    // Check if the user is the owner of the profile being updated
-    if (user.id !== req.user.id) {
-      return res.status(401).send('Unauthorized to update the profile');
-    }
-    const updateUser = await User.findByIdAndUpdate(
+    const updatedUser = await User.findOneAndUpdate(
       id,
       {
         title: req.body.title,
