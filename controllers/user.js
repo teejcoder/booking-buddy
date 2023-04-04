@@ -31,7 +31,6 @@ module.exports = {
         youtube: req.body.youtube,
         facebook: req.body.facebook,
       });
-      console.log(data)
       res.status(201).send('User created successfully');
       res.redirect("/profile");
     } catch (error) {
@@ -86,7 +85,7 @@ updateUser: async (req, res) => {
     if (user.id !== req.user.id) {
       return res.status(401).send('Unauthorized to update the profile');
     }
-    const updatedUser = await User.findByIdAndUpdate(
+    const updateUser = await User.findByIdAndUpdate(
       id,
       {
         title: req.body.title,
@@ -108,7 +107,6 @@ updateUser: async (req, res) => {
       { new: true }
     );
     res.render("updateUser.ejs", { user: req.user });
-    res.status(200).json(updatedUser);
   } catch (error) {
     console.error(error);
     res.status(500).send('Error updating user');

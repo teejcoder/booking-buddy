@@ -392,7 +392,7 @@ a {
   -o-transition: background-color, font-style, 0.1s ease-out;
   transition: background-color, font-style, 0.1s ease-out;
 } a:hover{
-  color: white;
+  color: #fc67cf;
 }
 
 button, .btn, .btn-primary {
@@ -411,7 +411,7 @@ button, .btn, .btn-primary {
 }
 .btn:hover{
   background-color:#ffc900;
-  box-shadow: 5px 5px black;
+  border: 5px solid black;
 }
 
 
@@ -502,14 +502,12 @@ a h1 {
     background-color: white;
 }
 
-.userNameHeader {
+.userNameFooter {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 200px;
-  height: 100px;
+  font-size: 100px;
   margin: 0;
-  background-color: #ffc900;
 }
 
 .footer {
@@ -532,11 +530,11 @@ a h1 {
 /*************************************************************************************************/
 
 .feedContainer {
+  height: 500px;
   padding: 80px 150px;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80%;
   flex-wrap: wrap;
   background-color: #fef2c1;
 }
@@ -662,7 +660,7 @@ li {
 */
 
 .hero {
-  height: 850px;
+  height: 950px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -773,7 +771,6 @@ li{
   height: 50px;
   border-radius: 25px;
   border: 2px solid black;
-  box-shadow: 5px 5px black;
   margin: 15px;
 }
 .profileYearFormed {
@@ -785,7 +782,6 @@ li{
   border: 2px solid black;
   border-radius: 25px;
   background-color: #fef2c1;
-  box-shadow: 5px 5px black;
   font-size: small;
 }
 
@@ -840,7 +836,7 @@ li{
   border-radius: 25px;
 }
 
-.profilePosts {
+/* .profilePosts {
   padding-bottom: 5%;
   padding-left: 0;
   margin: 5%;
@@ -854,7 +850,7 @@ li{
   grid-template-rows: repeat(3, auto);
   grid-column-gap: 1%;
   grid-row-gap: 4%;
-}
+} */
 
 .form-control {
   height: 60px;

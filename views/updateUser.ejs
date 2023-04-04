@@ -5,11 +5,11 @@
     <div class="updateUserContainer">
 
         <form method="PUT" action="/updateUser?_method=PUT">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" value="<%= user.username %>" required><br><br>
+            <label for="userName">Username:</label>
+            <input type="text" id="userName" name="userName" value="<%= user.userName %>"><br><br>
     
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" value="<%= user.email %>" required><br><br>
+            <input type="email" id="email" name="email" value="<%= user.email %>"><br><br>
     
             <label for="password">New Password:</label>
             <input type="password" id="password" name="password"><br><br>
@@ -17,16 +17,53 @@
             <label for="confirmPassword">Confirm New Password:</label>
             <input type="password" id="confirmPassword" name="confirmPassword"><br><br>
     
-            <label for="firstName">First Name:</label>
-            <input type="text" id="firstName" name="firstName" value="<%= user.firstName %>"><br><br>
+            <label for="title">Band Title:</label>
+            <input type="text" id="title" name="title" value="<%= user.title %>"><br><br>
     
-            <label for="lastName">Last Name:</label>
-            <input type="text" id="lastName" name="lastName" value="<%= user.lastName %>"><br><br>
+            <label for="description">Description:</label>
+            <textarea id="description" name="description"></textarea><br><br>
     
-            <label for="age">Age:</label>
-            <input type="number" id="age" name="age" value="<%= user.age %>"><br><br>
+            <label for="genre">Genre:</label>
+            <input type="text" id="genre" name="genre" value="<%= user.genre %>"><br><br>
     
+            <label for="yearFormed">Year Formed:</label>
+            <input type="number" id="yearFormed" name="yearFormed" value="<%= user.yearFormed %>"><br><br>
+    
+            <label for="members">Members:</label>
+            <input type="text" id="members" name="members" value="<%= user.members %>"><br><br>
+    
+            <label for="website">Website:</label>
+            <input type="url" id="website" name="website" value="<%= user.website %>"><br><br>
+    
+            <label for="image">Profile Image:</label>
+            <input type="file" id="image" name="image"><br><br>
+    
+            <label for="spotify">Spotify:</label>
+            <input type="url" id="spotify" name="spotify" value="<%= user.spotify %>"><br><br>
+    
+            <label for="soundcloud">SoundCloud:</label>
+            <input type="url" id="soundcloud" name="soundcloud" value="<%= user.soundcloud %>"><br><br>
+    
+            <label for="appleMusic">Apple Music:</label>
+            <input type="url" id="appleMusic" name="appleMusic" value="<%= user.appleMusic %>"><br><br>
+    
+            <label for="instagram">Instagram:</label>
+            <input type="url" id="instagram" name="instagram" value="<%= user.instagram %>"><br><br>
+    
+            <label for="tiktok">TikTok:</label>
+            <input type="url" id="tiktok" name="tiktok" value="<%= user.tiktok %>"><br><br>
+    
+            <label for="twitter">Twitter:</label>
+            <input type="url" id="twitter" name="twitter" value="<%= user.twitter %>"><br><br>
+    
+            <label for="youtube">YouTube:</label>
+            <input type="url" id="youtube" name="youtube" value="<%= user.youtube %>"><br><br>
+
+            <label for="facebook">Facebook:</label>
+            <input type="url" id="facebook" name="facebook" value="<%= user.facebook %>"><br><br>
+
             <button type="submit">Update Information</button>
+
         </form>
 
     </div>
