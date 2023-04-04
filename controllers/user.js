@@ -73,37 +73,47 @@ getUserById: async (req, res) => {
   }
 },
 
+// GET Update user
+getUpdateUser: async (req, res) => {
+  try {
+  
+    res.render("updateUser.ejs", { user: req.user });
+  } catch (err) {
+    console.log(err);
+  }
+},
+
 // Update user
 updateUser: async (req, res) => {
   const { id } = req.params;
   try {
-    const updatedUser = await User.findOneAndUpdate(
-      id,
-      {
-        title: req.body.title,
-        description: req.body.description,
-        genre: req.body.genre,
-        yearFormed: req.body.yearFormed,
-        members: req.body.members,
-        website: req.body.website,
-        spotify: req.body.spotify,
-        soundcloud: req.body.soundcloud,
-        appleMusic: req.body.appleMusic,
-        instagram: req.body.instagram,
-        tiktok: req.body.tiktok,
-        twitter: req.body.twitter,
-        youtube: req.body.youtube,
-        facebook: req.body.facebook,
-        updatedAt: Date.now()
-      },
-      { new: true }
-    );
-    res.render("updateUser.ejs", { user: req.user });
+    const updateUser = await User.findOneAndUpdate(
+    { _id: id },
+    {
+      title: req.body.title,
+      description: req.body.description,
+      genre: req.body.genre,
+      yearFormed: req.body.yearFormed,
+      members: req.body.members,
+      website: req.body.website,
+      spotify: req.body.spotify,
+      soundcloud: req.body.soundcloud,
+      appleMusic: req.body.appleMusic,
+      instagram: req.body.instagram,
+      tiktok: req.body.tiktok,
+      twitter: req.body.twitter,
+      youtube: req.body.youtube,
+      facebook: req.body.facebook,
+      updatedAt: Date.now()
+    },
+  { new: true }
+  );
+  res.render("profile.ejs", { user: updateUser });
   } catch (error) {
-    console.error(error);
-    res.status(500).send('Error updating user');
-  }
-},
+  console.error(error);
+  res.status(500).send('Error updating user');
+    }
+  },
 
   // Delete a user
   deleteUser: async (req, res) => {

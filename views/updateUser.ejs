@@ -3,8 +3,8 @@
 	<h1>Update User Information</h1>
 
     <div class="updateUserContainer">
-
-        <form method="PUT" action="/updateUser?_method=PUT">
+        
+        <form action="/updateUser/<%= user.id %>?_method=PUT" method="POST">
             <label for="userName">Username:</label>
             <input type="text" id="userName" name="userName" value="<%= user.userName %>"><br><br>
     

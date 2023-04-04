@@ -13,8 +13,12 @@ router.get("/profile", ensureAuth, postsController.getProfile);
 // Get a specific user
 router.get('/profile/:id', userController.getUserById);
 
+
 // Update a user
-router.get('/updateUser', ensureAuth, userController.updateUser);
+router.get('/updateUser', userController.getUpdateUser);
+// Update a user
+router.put('/updateUser/:id', ensureAuth, userController.updateUser);
+
 
 router.get("/feed", userController.getAllUsers);
 router.get("/login", authController.getLogin);
