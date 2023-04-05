@@ -1,4 +1,4 @@
-
+<%- include('partials/header') -%>
 
 <!DOCTYPE html>
 <html>
@@ -12,10 +12,9 @@
       <div class="allProfileContainers">
 
 
-          <div class="profileFirst">
-              <h1 class="profileUserName"><%= user.userName %></h1>
-          </div>
-
+        <div class="profileFirst">
+          <h1 class="profileUserName"><%= user.userName %></h1>
+        </div>
 
           <div class="hero">
 
@@ -29,25 +28,8 @@
               <div class="allProfilePieces">
 
 
-                <div class="profilePieces profileGenreAndYear">
-                    
-                  <div class="profilePieces profileYearFormed"  <% if (!user.yearFormed) { %>style="display:none"<% } %>>
-                    <h2>Est: <%= user.yearFormed %></h2>
-                  </div>
+                <div class="profilePieces profileGenreAndYearAndMembers">
 
-                  <div class="profilePieces profileGenre"  <% if (!user.genre) { %>style="display:none"<% } %>>
-                    <h4><%= user.genre %></h4>
-                  </div>
-
-                    <div class="profilePieces profileUpdateUser">
-                      <a href="/updateUser"><h2>Update</h2></a>
-                    </div>
-
-                </div>
-
-
-                <div class="profileMembersGenre">
-                
                   <div class="profilePieces profileMembers"  <% if (!user.members) { %>style="display:none"<% } %>>
                     <h2>Members:</h2>
                     
@@ -59,7 +41,22 @@
                       <% } %>
                     </ul>
                   </div>
+                  
+                  <div class="profileGenreAndYear">
 
+                    <div class="profilePieces profileYearFormed"  <% if (!user.yearFormed) { %>style="display:none"<% } %>>
+                      <h2>Est: <%= user.yearFormed %></h2>
+                    </div>
+
+                    <div class="profilePieces profileGenre"  <% if (!user.genre) { %>style="display:none"<% } %>>
+                      <h4><%= user.genre %></h4>
+                    </div>
+
+                    <div class="profilePieces profileUpdateUser">
+                       <a href="/updateUser"><h2>Update</h2></a>
+                    </div>
+
+                  </div>      
                 </div>
 
                 <div class="profilePieces profileBio"  <% if (!user.description) { %>style="display:none"<% } %>>
