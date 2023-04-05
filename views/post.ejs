@@ -11,7 +11,7 @@
           action="/post/likePost/<%= post.id %>?_method=PUT"
           method="POST"
         >
-          <button class="btn btn-primary fa fa-heart" type="submit"><%= post.likes%></button>
+          <button id="btn" class="btn btn-primary fa fa-heart" type="submit"><%= post.likes%></button>
         </form>
         <h3 class="col-3">Likes: <%= post.likes %></h3>
         <%if(post.user == user.id){ %>
@@ -20,7 +20,7 @@
           method="POST"
           class="col-3"
         >
-          <button class="btn btn-primary fa fa-trash" type="submit"></button>
+          <button id="btn" class="btn btn-primary fa fa-trash" type="submit"></button>
         </form>
         <%}%>
       </div>
@@ -35,7 +35,7 @@
             <label for="comment" class="form-label">Comment</label>
             <input type="text" class="form-control" id="comment" name="comment">
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button id="btn" type="submit" class="btn btn-primary">Submit</button>
       </form>
     </div>
     <ul>
@@ -46,15 +46,9 @@
       <% } %>
     </ul>
     <div class="col-6 mt-5">
-      <a class="btn btn-primary" href="/profile">Return to Profile</a>
-      <a class="btn btn-primary" href="/feed">Return to Feed</a>
+      <a id="btn" class="btn btn-primary" href="/profile">Return to Profile</a>
+      <a id="btn" class="btn btn-primary" href="/feed">Return to Feed</a>
     </div>
   </div>
 </div>
-
 <%- include('partials/footer') -%>
-
-
-
-
-

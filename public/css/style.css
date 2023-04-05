@@ -375,7 +375,7 @@ input, textarea {
   width: 200px;
   border: 0;
   border: 2px solid black;
-  background-color: white;
+  background-color: inherit;
   text-align: center;
   margin: 20px;
   box-shadow: 10px 10px black;
@@ -395,14 +395,17 @@ a {
   color: #fc67cf;
 }
 
-button, .btn, .btn-primary {
+button,
+.btn,
+.btn-primary {
   height: 25px;
   width: 75px;
   padding: 12px 24px;
   margin: 15px;
   border-radius: 25px;
   border: 2px solid black;
-  background-color: #fef2c1;
+
+  color: black; /* add this to set the button text color */
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -413,8 +416,6 @@ button, .btn, .btn-primary {
   background-color:#ffc900;
   border: 5px solid black;
 }
-
-
 
 
 /*************************************************************************************************/
@@ -530,7 +531,7 @@ a h1 {
 /*************************************************************************************************/
 
 .feedContainer {
-  height: 500px;
+  height: 100%;
   padding: 80px 150px;
   display: flex;
   justify-content: center;
@@ -633,9 +634,8 @@ li {
   flex-direction: column;
 }
 
-
 .profileFirst {
-  height: 300px;
+  height: 200px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -706,13 +706,15 @@ li {
   align-items: center;  
   flex-direction: column;
   justify-content: space-evenly;
-  padding: 0px 25px;
+  padding: 25px;
+}.allProfilePieces:nth-child(1){
+  justify-content: start;
+  align-items: end;
 }
 
 
 .profileMembersGenre {
-  width: 100%;
-  height: 20%;
+
   display: flex;
   align-items: start;
   justify-content: center;
@@ -751,15 +753,15 @@ li{
   justify-content:start;
 }
 
+
+/* PROFILE GENRE AND YEAR */
+
+
 .profileGenreAndYear {
-  width: 40%;
-  height: 120px;
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-evenly;
   flex-direction: column;
-  border-radius: 25px;
-  margin: 8px;
 }
 
 .profileGenre{
@@ -767,18 +769,30 @@ li{
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 80%;
-  height: 50px;
+  width: 120px;
+  height: 40px;
   border-radius: 25px;
   border: 2px solid black;
-  margin: 15px;
+  margin-bottom: 3px;
 }
 .profileYearFormed {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 80%;
-  height: 50px;
+  width: 120px;
+  height: 40px;
+  border: 2px solid black;
+  border-radius: 25px;
+  background-color: #fef2c1;
+  font-size: small;
+  margin-bottom: 3px;
+}
+.profileUpdateUser {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 40px;
   border: 2px solid black;
   border-radius: 25px;
   background-color: #fef2c1;
@@ -806,6 +820,8 @@ li{
   flex-direction: column;
   font-size: 45px;
 }
+.profileBio > p {
+} 
 
 
 

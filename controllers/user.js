@@ -108,7 +108,7 @@ updateUser: async (req, res) => {
     },
   { new: true }
   );
-  res.render("profile.ejs", { user: updateUser });
+  res.render("profile.ejs");
   } catch (error) {
   console.error(error);
   res.status(500).send('Error updating user');
