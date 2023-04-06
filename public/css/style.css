@@ -404,7 +404,7 @@ button,
   margin: 15px;
   border-radius: 25px;
   border: 2px solid black;
-
+  background-color: inherit;
   color: black; /* add this to set the button text color */
   cursor: pointer;
   display: flex;
