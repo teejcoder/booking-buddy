@@ -41,10 +41,6 @@ const UserSchema = new mongoose.Schema({
     type: [String],
     required: true
   },
-  website: {
-    type: String,
-    required: false
-  },
   createdAt: {
     type: Date,
     default: Date.now
@@ -56,6 +52,10 @@ const UserSchema = new mongoose.Schema({
 
   // SOCIALS FOR PROFILE PAGE
 
+  website: {
+    type: String,
+    required: false
+  },
   spotify: {
     type: String,
     required: false
@@ -89,6 +89,14 @@ const UserSchema = new mongoose.Schema({
     required: false
   },
 });
+
+
+
+
+
+
+
+
 
 // Password hash middleware.
 
