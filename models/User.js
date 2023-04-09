@@ -2,10 +2,22 @@ const bcrypt = require("bcrypt");
 const mongoose = require("mongoose");
 
 const UserSchema = new mongoose.Schema({
+
+  firstName: { 
+    type: String, 
+    unique: true 
+  },
+  lastName: { 
+    type: String, 
+    unique: true 
+  },
+
+// replace userName with first and lastName
   userName: { 
     type: String, 
     unique: true 
   },
+
   email: { 
     type: String, 
     unique: true 
