@@ -446,7 +446,6 @@ button,
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  background-color: #ffc900;
 }
 
 .indexLandingImg {
@@ -868,38 +867,30 @@ li{
 /*************************************************************************************************/
 
 .signupPage {
-  height: 100%;
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #fef2c1;
+  padding: 50px;
 }
 
 .signupFormContainer {
-  margin: 50px 0px;
-  height: 90%;
-  width: 1150px;
-  text-align: center;
+  height: 800px;
+  width: 600px;
+  border: 2px solid black;
   display: flex;
-  border-left: 2px solid black;
-  border-right: 2px solid black;
-  border-top: 2px solid black;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
   box-shadow: 15px 15px black; 
 }
 
-
-
-.accountInfo {
-  background-color: #90a8ed;
-  padding: 10px;
+.accountInfo > form {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-bottom: 2px solid black;
-
-  padding-bottom: 30px;
-  gap: 0px 10px;
+  flex-direction: column;
 }
 
 .profilePageInfo {

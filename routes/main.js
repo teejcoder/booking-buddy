@@ -16,14 +16,19 @@ router.get('/profile/:id', userController.getUserById);
 
 // Update a user
 router.get('/updateUser', userController.getUpdateUser);
-// Update a user
 router.put('/updateUser/:id', ensureAuth, userController.updateUser);
 
 
 router.get("/feed", userController.getAllUsers);
+
 router.get("/login", authController.getLogin);
 router.post("/login", authController.postLogin);
 router.get("/logout", authController.logout);
+
+
+// router.get("/signupTalentInfo", authController.getSignupTalentInfo)
+// router.post('/signupTalentInfo', authController.postSignupTalentInfo);
+
 router.get("/signup", authController.getSignup);
 router.post("/signup", authController.postSignup);
 

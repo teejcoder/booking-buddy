@@ -16,26 +16,24 @@
                 <% } %>
 
 
-                    
-                <!-- <form action="/user/createUser/" method="POST" enctype="multipart/form-data"> -->
-                <form action="signupTalentInfo.ejs" method="POST" enctype="multipart/form-data">
+                <div class="accountInfo">
+                    <form action="/signupTalentInfo.ejs" method="POST" enctype="multipart/form-data">
+                        <h2>USER INFO</h2>
+                        
+                        <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+                        
+                        
+                        <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
 
-                    <h2>USER INFO</h2>
-                    <div class="accountInfo">
-                        <label for="userName">User Name:</label>
-                        <input type="text" id="userName" name="userName" required>
                         
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
+                        <input type="email" id="email" name="email" placeholder="Email Address" required>
                         
-                        <label for="password">Password:</label>
-                        <input type="password" id="password" name="password">
+                        
+                        <input type="password" id="password" placeholder="Password" name="password">
 
                         <button type="submit" class="createUserButton btn btn-primary">Next</button>
-                    </div>                       
-                    
-
-                </form>
+                    </form>                           
+                </div>    
         </div>
 </div>
 

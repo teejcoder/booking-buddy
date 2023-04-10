@@ -57,6 +57,7 @@ exports.logout = (req, res) => {
   });
 };
 
+//SIGN UP FIRST PAGE
 exports.getSignup = (req, res) => {
   if (req.user) {
     return res.redirect("/profile");
@@ -65,7 +66,6 @@ exports.getSignup = (req, res) => {
     title: "Create Account",
   });
 };
-
 exports.postSignup = (req, res, next) => {
   const validationErrors = [];
   if (!validator.isEmail(req.body.email))
@@ -84,6 +84,21 @@ exports.postSignup = (req, res, next) => {
   req.body.email = validator.normalizeEmail(req.body.email, {
     gmail_remove_dots: false,
   });
+
+//SIGN UP SECOND PAGE
+exports.getSignupTalentInfo = (req, res) => {
+  if (req.user) {
+    return res.redirect("/profile");
+  }
+  res.render("signupTalentInfo", {
+    title: "signupTalentInfo",
+  });
+};
+exports.postSignupTalentInfo = (req, res) => {
+  // TODO: Implement this function
+};
+
+
 
 
   User.findOne(

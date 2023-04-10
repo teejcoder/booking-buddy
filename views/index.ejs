@@ -2,13 +2,11 @@
 
 <main class="indexLanding">
 
-    <img class="indexLandingImg" src="https://images.pexels.com/photos/1644616/pexels-photo-1644616.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
-   
     <div class="indexLandingDiv">
 
         <!-- login -->
 
-        <section class="indexLoginForm" autofocus>
+        <section class="indexLoginForm" id="loginFormSection">
 
             <% if (locals.messages.errors) { %> <% messages.errors.forEach( el => { %>
 
@@ -58,3 +56,10 @@
 </main>
 
 <%- include('partials/footer') -%>
+
+<script>
+    window.addEventListener("load", function() {
+        var formSection = document.getElementById("loginFormSection");
+        formSection.scrollIntoView({ behavior: "smooth" });
+    });
+</script>
