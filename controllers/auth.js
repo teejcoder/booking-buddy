@@ -85,45 +85,35 @@ exports.postSignup = (req, res, next) => {
     gmail_remove_dots: false,
   });
 
-//SIGN UP SECOND PAGE
-exports.getSignupTalentInfo = (req, res) => {
-  if (req.user) {
-    return res.redirect("/profile");
-  }
-  res.render("signupTalentInfo", {
-    title: "signupTalentInfo",
-  });
-};
-exports.postSignupTalentInfo = (req, res) => {
-  // TODO: Implement this function
-};
 
-
-
-
-  User.findOne(
-    { $or: [{ email: req.body.email }, { userName: req.body.userName }] },
-    (err, existingUser) => {
+User.findOne(
+  { $or: [{ email: req.body.email }, { userName: req.body.userName }] },
+  (err, existingUser) => {
+    if (err) {
+      return next(err);
+    }
+    if (existingUser) {
+      req.flash("errors", {
+        msg: "Account with that email address or username already exists.",
+      });
+      return res.redirect("../signup");
+    }
+    const user = new User({
+      email: req.body.email,
+      password: req.body.password,
+      userName: req.body.userName,
+    });
+    user.save((err) => {
       if (err) {
         return next(err);
       }
-      if (existingUser) {
-        req.flash("errors", {
-          msg: "Account with that email address or username already exists.",
-        });
-        return res.redirect("../signup");
-      }
-      user.save((err) => {
+      req.logIn(user, (err) => {
         if (err) {
           return next(err);
         }
-        req.logIn(user, (err) => {
-          if (err) {
-            return next(err);
-          }
-          res.redirect("/profile");
-        });
+        res.redirect("/profile");
       });
-    }
-  );
+    });
+  }
+);
 };
