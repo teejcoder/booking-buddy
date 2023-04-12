@@ -10,16 +10,21 @@ const { ensureAuth, ensureGuest } = require("../middleware/auth");
 router.get("/", homeController.getIndex);
 router.get("/profile", ensureAuth, postsController.getProfile);
 
-router.post('/createUser', userController.createUser);
-
 // Get a specific user
 router.get('/profile/:id', userController.getUserById);
+
+router.post('/createUser', userController.createUser);
 
 // Update a user
 router.get('/updateUser', userController.getUpdateUser);
 router.put('/updateUser/:id', ensureAuth, userController.updateUser);
 
+
+// Get all users
 router.get("/feed", userController.getAllUsers);
+
+// Delete a user
+router.delete('/deleteUser/:id', ensureAuth, userController.deleteUser);
 
 router.get("/login", authController.getLogin);
 router.post("/login", authController.postLogin);

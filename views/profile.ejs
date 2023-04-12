@@ -11,6 +11,11 @@
 
       <div class="allProfileContainers">
 
+
+        <div class="profileFirst">
+          <h1 class="profileUserName"><%= user.userName %></h1>
+        </div>
+
           <div class="hero">
 
             <div class="profileSecondLeft">
@@ -40,7 +45,7 @@
                   <div class="profileGenreAndYear">
 
                     <div class="profilePieces profileYearFormed"  <% if (!user.yearFormed) { %>style="display:none"<% } %>>
-                      <h2><%= user.title %></h2>
+                      <h2>Est: <%= user.yearFormed %></h2>
                     </div>
 
                     <div class="profilePieces profileGenre"  <% if (!user.genre) { %>style="display:none"<% } %>>
