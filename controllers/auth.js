@@ -32,13 +32,12 @@ exports.postLogin = (req, res, next) => {
     }
     if (!user) {
       req.flash("errors", info);
-      return res.redirect("/profile");
+      return res.redirect("/login");
     }
     req.logIn(user, (err) => {
       if (err) {
         return next(err);
       }
-      req.session.user = user; // Add current session user
       req.flash("success", { msg: "Success! You are logged in." });
       res.redirect(req.session.returnTo || "/profile");
     });
@@ -57,7 +56,6 @@ exports.logout = (req, res) => {
   });
 };
 
-//SIGN UP FIRST PAGE
 exports.getSignup = (req, res) => {
   if (req.user) {
     return res.redirect("/profile");
@@ -66,6 +64,7 @@ exports.getSignup = (req, res) => {
     title: "Create Account",
   });
 };
+
 exports.postSignup = (req, res, next) => {
   const validationErrors = [];
   if (!validator.isEmail(req.body.email))
@@ -85,35 +84,35 @@ exports.postSignup = (req, res, next) => {
     gmail_remove_dots: false,
   });
 
+  const user = new User({
+    userName: req.body.userName,
+    email: req.body.email,
+    password: req.body.password,
+  });
 
-User.findOne(
-  { $or: [{ email: req.body.email }, { userName: req.body.userName }] },
-  (err, existingUser) => {
-    if (err) {
-      return next(err);
-    }
-    if (existingUser) {
-      req.flash("errors", {
-        msg: "Account with that email address or username already exists.",
-      });
-      return res.redirect("../signup");
-    }
-    const user = new User({
-      email: req.body.email,
-      password: req.body.password,
-      userName: req.body.userName,
-    });
-    user.save((err) => {
+  User.findOne(
+    { $or: [{ email: req.body.email }, { userName: req.body.userName }] },
+    (err, existingUser) => {
       if (err) {
         return next(err);
       }
-      req.logIn(user, (err) => {
+      if (existingUser) {
+        req.flash("errors", {
+          msg: "Account with that email address or username already exists.",
+        });
+        return res.redirect("../signup");
+      }
+      user.save((err) => {
         if (err) {
           return next(err);
         }
-        res.redirect("/profile");
+        req.logIn(user, (err) => {
+          if (err) {
+            return next(err);
+          }
+          res.redirect("/profile");
+        });
       });
-    });
-  }
-);
+    }
+  );
 };
