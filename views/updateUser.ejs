@@ -17,8 +17,12 @@
             <label for="confirmPassword">Confirm New Password:</label>
             <input type="password" id="confirmPassword" name="confirmPassword"><br><br>
     
-            <label for="title">Band Title:</label>
-            <input type="text" id="title" name="title" value="<%= user.title %>"><br><br>
+                <select type="title" name="title" id="title" for="title">
+                    <option value="musician">Musician</option>
+                    <option value="actor">Actor</option>
+                    <option value="model">Model</option>
+                    <option value="comedian">Comedian</option>
+                </select>
     
             <label for="description">Description:</label>
             <textarea id="description" name="description"></textarea><br><br>

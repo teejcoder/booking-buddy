@@ -12,12 +12,6 @@ const UserSchema = new mongoose.Schema({
     unique: true 
   },
 
-// replace userName with first and lastName
-  userName: { 
-    type: String, 
-    unique: true 
-  },
-
   email: { 
     type: String, 
     unique: true 
