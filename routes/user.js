@@ -4,7 +4,6 @@ const upload = require("../middleware/multer");
 const userController = require('../controllers/user');
 const { ensureAuth, ensureGuest } = require("../middleware/auth");
 
-
 // Get all users
 router.get('/getAllUsers', userController.getAllUsers);
 

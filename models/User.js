@@ -3,49 +3,72 @@ const mongoose = require("mongoose");
 
 const UserSchema = new mongoose.Schema({
 
+  // user credentials
   firstName: { 
     type: String, 
-    unique: true 
+    unique: true,
   },
   lastName: { 
     type: String, 
-    unique: true 
+    unique: true, 
   },
-
+  userName: {
+    type: String, 
+    unique: true, 
+  },
   email: { 
     type: String, 
-    unique: true 
+    unique: true, 
   },
 
   password: String,
 
   image: {
     type: String, 
-    unique: true,
+    unique: false,
   },
   cloudinaryId: {
     type: String,
-    require: true,
+    require: false,
   },
   title: {
     type: String,
-    required: true
+    required: false,
   },
+
+ // SCHEMA FOR ALL USERS
+ 
   description: {
     type: String,
-    required: true
+    required: false,
   },
-  genre: {
+  location: {
     type: String,
-    required: true
+    required: false,
   },
-  yearFormed: {
-    type: Number,
-    required: true
+  website: {
+    type: String,
+    required: false,
   },
-  members: {
-    type: [String],
-    required: true
+  youtube: {
+    type: String,
+    required: false,
+  },
+  instagram: {
+    type: String,
+    required: false,
+  },
+  tiktok: {
+    type: String,
+    required: false,
+  },
+  twitter: {
+    type: String,
+    required: false,
+  },
+  facebook: {
+    type: String,
+    required: false,
   },
   createdAt: {
     type: Date,
@@ -56,51 +79,50 @@ const UserSchema = new mongoose.Schema({
     default: Date.now
   },
 
-  // SOCIALS FOR PROFILE PAGE
 
-  website: {
+  // MUSIC SCHEMA
+  genre: {
     type: String,
-    required: false
+    required: false,
   },
   spotify: {
     type: String,
-    required: false
+    required: false,
   },
   soundcloud: {
     type: String,
-    required: false
+    required: false,
   },
-  appleMusic: {
+
+
+  // ACTOR/MODEL/COMEDIAN/MUSICIAN SCHEMA
+  ageRange: {
     type: String,
-    required: false
+    required: false,
   },
-  instagram: {
+  ethnicity: {
     type: String,
-    required: false
+    required: false,
   },
-  tiktok: {
+  gender: {
     type: String,
-    required: false
+    enum: ['male', 'female',  'non-binary'],
+    required: false,
   },
-  twitter: {
+  height: {
     type: String,
-    required: false
+    required: false,
   },
-  youtube: {
+  hair: {
     type: String,
-    required: false
+    required: false,
   },
-  facebook: {
+  eyes: {
     type: String,
-    required: false
-  },
+    required: false,
+  }
+
 });
-
-
-
-
-
-
 
 
 
