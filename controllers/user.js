@@ -94,34 +94,53 @@ getUpdateUser: async (req, res) => {
 // Update user
 updateUser: async (req, res) => {
   const { id } = req.params;
+  const result = await cloudinary.uploader.upload(req.file.path);
+      
   try {
     const updateUser = await User.findOneAndUpdate(
-    { _id: id },
-    {
-      title: req.body.title,
-      description: req.body.description,
-      genre: req.body.genre,
-      yearFormed: req.body.yearFormed,
-      members: req.body.members,
-      website: req.body.website,
-      spotify: req.body.spotify,
-      soundcloud: req.body.soundcloud,
-      appleMusic: req.body.appleMusic,
-      instagram: req.body.instagram,
-      tiktok: req.body.tiktok,
-      twitter: req.body.twitter,
-      youtube: req.body.youtube,
-      facebook: req.body.facebook,
-      updatedAt: Date.now()
-    },
-  { new: true }
-  );
-  res.render("profile.ejs");
+      { _id: id },
+      {
+        userName: req.body.userName,
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        email: req.body.email,
+        password: req.body.password,
+        image: result.secure_url,
+        cloudinaryId: result.public_id,
+        title: req.body.title,
+        description: req.body.description,
+        location: req.body.location,
+        website: req.body.website,
+        youtube: req.body.youtube,
+        instagram: req.body.instagram,
+        tiktok: req.body.tiktok,
+        twitter: req.body.twitter,
+        facebook: req.body.facebook,
+        createdAt: req.body.createdAt,
+        updatedAt: req.body.updatedAt,
+        genre: req.body.genre,
+        spotify: req.body.spotify,
+        soundcloud: req.body.soundcloud,
+        ageRange: req.body.ageRange,
+        ethnicity: req.body.ethnicity,
+        gender: req.body.gender,
+        height: req.body.height,
+        hair: req.body.hair,
+        eyes: req.body.eyes,
+        updatedAt: Date.now()
+      },
+      { new: true }
+    );
+
+    // Pass the user object to the view
+    res.render("profile.ejs", { user: updateUser });
+
   } catch (error) {
-  console.error(error);
-  res.status(500).send('Error updating user');
-    }
-  },
+    console.error(error);
+    res.status(500).send('Error updating user');
+  }
+},
+
 
   // Delete a user
   deleteUser: async (req, res) => {

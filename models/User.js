@@ -25,7 +25,6 @@ const UserSchema = new mongoose.Schema({
 
   image: {
     type: String, 
-    unique: false,
   },
   cloudinaryId: {
     type: String,

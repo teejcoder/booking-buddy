@@ -17,6 +17,10 @@
 
             <form action="/signup" method="POST">
                 <div class="mb-3">
+                    <label for="img-upload class="form-label">Display Pic</label>
+                    <input type="file" class="img-upload" id="imageUpload" name="file">
+                </div>
+                <div class="mb-3">
                     <label for="userName" class="form-label">User Name</label>
                     <input type="text" class="form-control" id="userName" name="userName">
                   </div>
@@ -33,6 +37,7 @@
                     <label for="confirmPassword" class="form-label">Confirm Password</label>
                     <input type="password" class="form-control" id="confirmPassword" name="confirmPassword">
                 </div>
+
                 <button type="submit" class="btn btn-primary">Submit</button>
               </form>
 
