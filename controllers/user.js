@@ -94,7 +94,6 @@ getUpdateUser: async (req, res) => {
 // Update user
 updateUser: async (req, res) => {
   const { id } = req.params;
-  const result = await cloudinary.uploader.upload(req.file.path);
       
   try {
     const updateUser = await User.findOneAndUpdate(
@@ -103,10 +102,8 @@ updateUser: async (req, res) => {
         userName: req.body.userName,
         firstName: req.body.firstName,
         lastName: req.body.lastName,
-        email: req.body.email,
-        password: req.body.password,
-        image: result.secure_url,
-        cloudinaryId: result.public_id,
+        image: req.secure_url,
+        cloudinaryId: req.public_id,
         title: req.body.title,
         description: req.body.description,
         location: req.body.location,
