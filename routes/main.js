@@ -4,6 +4,7 @@ const authController = require("../controllers/auth");
 const homeController = require("../controllers/home");
 const postsController = require("../controllers/posts");
 const userController = require('../controllers/user');
+const upload = require("../middleware/multer");
 const { ensureAuth, ensureGuest } = require("../middleware/auth");
 
 //Main Routes - simplified for now
@@ -18,7 +19,7 @@ router.post('/createUser', userController.createUser);
 // Update a user
 router.get('/updateUser', userController.getUpdateUser);
 router.put('/updateUser/:id', ensureAuth, userController.updateUser);
-
+router.put('/updateProfilePic', ensureAuth, upload.single("file"), userController.updateProfilePic)
 
 // Get all users
 router.get("/feed", userController.getAllUsers);

@@ -1,3 +1,4 @@
+const multer = require('multer');
 const cloudinary = require("../middleware/cloudinary");
 const upload = require("../middleware/multer");
 const User = require('../models/User');
@@ -91,6 +92,25 @@ getUpdateUser: async (req, res) => {
   }
 },
 
+updateProfilePic: async (req, res) => {
+  try {
+    // Upload image to cloudinary
+    const result = await cloudinary.uploader.upload(req.file.path);
+
+    // Store file URL in MongoDB
+    const profilePic = await ProfilePic.findOneAndUpdate(
+      { user: req.user._id },
+      { image: result.secure_url, cloudinaryId: result.public_id },
+      { upsert: true, new: true }
+    );
+
+    console.log("Profile pic has been updated!");
+    res.redirect("/profile");
+  } catch (err) {
+    console.log(err);
+  }
+},
+
 // Update user
 updateUser: async (req, res) => {
   const { id } = req.params;
@@ -102,8 +122,6 @@ updateUser: async (req, res) => {
         userName: req.body.userName,
         firstName: req.body.firstName,
         lastName: req.body.lastName,
-        image: req.secure_url,
-        cloudinaryId: req.public_id,
         title: req.body.title,
         description: req.body.description,
         location: req.body.location,

@@ -681,6 +681,7 @@ li {
   height: 100%;
   width: 40%;
   border: 2px solid black;
+  border-right: none;
   display: flex;
   align-items: center;
   justify-content: center;
