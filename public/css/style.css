@@ -969,10 +969,28 @@ input::file-selector-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-direction: column;
 }
 
+.updateProfilePic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 
+.updateProfilePic > img {
+  border-radius: 750px;
+}
+
+.updateUserInfo {
+  border: 1px solid black;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 
 
 

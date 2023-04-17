@@ -4,6 +4,7 @@ const authController = require("../controllers/auth");
 const homeController = require("../controllers/home");
 const postsController = require("../controllers/posts");
 const userController = require('../controllers/user');
+const cloudinary = require("../middleware/cloudinary");
 const upload = require("../middleware/multer");
 const { ensureAuth, ensureGuest } = require("../middleware/auth");
 
@@ -19,6 +20,8 @@ router.post('/createUser', userController.createUser);
 // Update a user
 router.get('/updateUser', userController.getUpdateUser);
 router.put('/updateUser/:id', ensureAuth, userController.updateUser);
+
+router.get('/getProfilePic', ensureAuth, userController.getProfilePic)
 router.put('/updateProfilePic', ensureAuth, upload.single("file"), userController.updateProfilePic)
 
 // Get all users

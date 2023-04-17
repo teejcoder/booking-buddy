@@ -1,8 +1,6 @@
-const multer = require('multer');
 const cloudinary = require("../middleware/cloudinary");
 const upload = require("../middleware/multer");
 const User = require('../models/User');
-const { image } = require("../middleware/cloudinary");
 
 module.exports = {
   // Create a new user
@@ -92,6 +90,14 @@ getUpdateUser: async (req, res) => {
   }
 },
 
+getProfilePic: async (req, res) => {
+  try {
+  
+    res.render("updateUser.ejs", { user: req.user });
+  } catch (err) {
+    console.log(err);
+  }
+},
 updateProfilePic: async (req, res) => {
   try {
     // Upload image to cloudinary
@@ -101,15 +107,14 @@ updateProfilePic: async (req, res) => {
     const profilePic = await ProfilePic.findOneAndUpdate(
       { user: req.user._id },
       { image: result.secure_url, cloudinaryId: result.public_id },
-      { upsert: true, new: true }
     );
-
     console.log("Profile pic has been updated!");
     res.redirect("/profile");
   } catch (err) {
     console.log(err);
   }
 },
+
 
 // Update user
 updateUser: async (req, res) => {
