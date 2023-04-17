@@ -21,9 +21,6 @@ router.post('/createUser', userController.createUser);
 router.get('/updateUser', userController.getUpdateUser);
 router.put('/updateUser/:id', ensureAuth, userController.updateUser);
 
-router.get('/getProfilePic', ensureAuth, userController.getProfilePic)
-router.put('/updateProfilePic', ensureAuth, upload.single("file"), userController.updateProfilePic)
-
 // Get all users
 router.get("/feed", userController.getAllUsers);
 

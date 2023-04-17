@@ -90,43 +90,19 @@ getUpdateUser: async (req, res) => {
   }
 },
 
-getProfilePic: async (req, res) => {
-  try {
-  
-    res.render("updateUser.ejs", { user: req.user });
-  } catch (err) {
-    console.log(err);
-  }
-},
-updateProfilePic: async (req, res) => {
-  try {
-    // Upload image to cloudinary
-    const result = await cloudinary.uploader.upload(req.file.path);
-
-    // Store file URL in MongoDB
-    const profilePic = await ProfilePic.findOneAndUpdate(
-      { user: req.user._id },
-      { image: result.secure_url, cloudinaryId: result.public_id },
-    );
-    console.log("Profile pic has been updated!");
-    res.redirect("/profile");
-  } catch (err) {
-    console.log(err);
-  }
-},
-
-
 // Update user
 updateUser: async (req, res) => {
-  const { id } = req.params;
+  const { user } = req.params.id;
       
   try {
     const updateUser = await User.findOneAndUpdate(
-      { _id: id },
+      { user: req.user.id },
       {
         userName: req.body.userName,
         firstName: req.body.firstName,
         lastName: req.body.lastName,
+        image: result.secure_url, 
+        cloudinaryId: result.public_id,
         title: req.body.title,
         description: req.body.description,
         location: req.body.location,

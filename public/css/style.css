@@ -965,10 +965,10 @@ input::file-selector-button {
 
 
 
-.updateUserContainer > form {
+.updateUserContainer{
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: column;
 }
 
@@ -989,12 +989,18 @@ input::file-selector-button {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  height: 300px;
 }
 
 
 
-
+.updateUserSocials {
+  border: 1px solid black;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 
 
