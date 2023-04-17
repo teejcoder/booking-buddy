@@ -367,7 +367,6 @@
 body {
     font-family: 'Mabry pro', sans-serif;
     background-color: white;
-    height: 100%;
 }
 
 input, textarea {
@@ -401,7 +400,6 @@ button,
   height: 25px;
   width: 75px;
   padding: 12px 24px;
-  margin: 15px;
   border-radius: 25px;
   border: 2px solid black;
   background-color: inherit;
@@ -963,15 +961,6 @@ input::file-selector-button {
 */
 /*************************************************************************************************/
 
-
-
-.updateUserContainer{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: column;
-}
-
 .updateProfilePic {
   display: flex;
   align-items: center;
@@ -981,29 +970,35 @@ input::file-selector-button {
 
 .updateProfilePic > img {
   border-radius: 750px;
+  height: 200px;
 }
 
 .updateUserInfo {
-  border: 1px solid black;
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 300px;
 }
-
 
 
 .updateUserSocials {
-  border: 1px solid black;
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.updateUserMusician {
+  display: flex;  
+  justify-content: center;
+  align-items: center;
+}
 
 
+.actorComedianModel {
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  flex-wrap: wrap;
+}
 
 
 
