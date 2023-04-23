@@ -17,9 +17,9 @@ router.get('/profile/:id', userController.getUserById);
 
 router.post('/createUser', userController.createUser);
 
-// Update a user
-router.get('/updateUser', userController.getUpdateUser);
+router.get('/updateUser/:id', userController.getUpdateUser);
 router.put('/updateUser/:id', ensureAuth, userController.updateUser);
+
 
 // Get all users
 router.get("/feed", userController.getAllUsers);

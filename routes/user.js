@@ -5,6 +5,7 @@ const userController = require('../controllers/user');
 const { ensureAuth, ensureGuest } = require("../middleware/auth");
 
 
+// Update a user
 
 
 module.exports = router;
