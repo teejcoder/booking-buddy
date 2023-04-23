@@ -92,8 +92,6 @@ getUpdateUser: async (req, res) => {
 
 // Update user
 updateUser: async (req, res) => {
-  const { user } = req.params.id;
-      
   try {
     const updateUser = await User.findOneAndUpdate(
       { user: req.user.id },
