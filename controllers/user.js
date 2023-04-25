@@ -38,7 +38,6 @@ module.exports = {
         hair: req.body.hair,
         eyes: req.body.eyes,
       });
-      res.status(201).send('User created successfully');
       res.redirect("/profile");
     } catch (error) {
       console.error(error);
@@ -55,7 +54,14 @@ module.exports = {
       console.log(err);
     }
   },
-
+    getProfile: async (req, res) => {
+    try {
+      const user = await User.find({ user: req.user });
+      res.render("profile.ejs", { user: req.user });
+    } catch (err) {
+      console.log(err);
+    }
+  },
   // Get all users
   getAllUsers: async (req, res) => {
     try {

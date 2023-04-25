@@ -20,10 +20,10 @@
             <% } %>
 
             <form action="/signup" method="POST">
-                <!-- <div class="mb-3">
-                    <label for="img-upload class="form-label">Display Pic</label>
+                <div class="mb-3">
+                    <label for="img-upload" class="form-label">Display Pic</label>
                     <input type="file" class="img-upload" id="imageUpload" name="file">
-                </div> -->
+                </div>
                 <div class="mb-3">
                     <label for="userName" class="form-label">User Name</label>
                     <input type="text" class="form-control" id="userName" name="userName">
@@ -31,7 +31,7 @@
                 <div class="mb-3">
                   <label for="exampleInputEmail1" class="form-label">Email address</label>
                   <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
-                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                  <span id="emailHelp" class="form-text">We'll never share your email with anyone else.</span>
                 </div>
                 <div class="mb-3">
                   <label for="password" class="form-label">Password</label>
@@ -43,7 +43,7 @@
                 </div>
 
                 <button type="submit" class="btn btn-primary">Submit</button>
-              </form>
+            </form>
 
                     <!-- <div class="accountInfo">
                     <form action="/signup" method="POST" enctype="multipart/form-data">
