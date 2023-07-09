@@ -7,7 +7,7 @@ const cloudinary = require("../middleware/cloudinary");
 const upload = require("../middleware/multer");
 const { ensureAuth, ensureGuest } = require("../middleware/auth");
 
-// Main Routes - simplified for now
+// get index.ejs
 router.get("/", homeController.getIndex);
 
 // Get a specific user
