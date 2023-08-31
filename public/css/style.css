@@ -10,13 +10,45 @@ body{
   justify-content: space-between;
 }
 
+.profileUsernameDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  width: 100%;
+}.profileUsername {
+  font-size: 200px;
+  margin: 0;
+  padding: 0;
+}
 
-img {
+.profileImageAndUpdateUserButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.updateUserButton {
+  font-size: 10px;
+  color: grey;
+}.userImage {
   width: 200px;
   height: 200px;
   border-radius: 50%;
 }
 
+
+.feedImg {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+.booking-buddy-logo-image {
+  height: 150px;
+}
+
+
+/* INDEX LANDING FORM STYLING */
 
 .indexLandingForm{
   display: flex;
