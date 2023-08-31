@@ -1,18 +1,11 @@
 <%- include('partials/header') -%>
 
-<!DOCTYPE html>
-<html>
-  <head>
-    <link rel="stylesheet" href="/css/style.css" />
-    
-    <title><% if (!user.userName) { %>style="display:none"<% } %></title>
-  </head>
   <body>
 
     <div class="allProfileContainers">
 
         <div class="profileFirst">
-          <h1 class="profileUserName"><% if (!user.userName) { %>style="display:none"<% } %></h1>
+          <h1 class="profileUserName"><%= user.userName %></h1>
         </div>
 
           <div class="hero">

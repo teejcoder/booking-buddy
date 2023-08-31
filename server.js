@@ -11,7 +11,6 @@ const connectDB = require("./config/database");
 const mainRoutes = require("./routes/main");
 const userRoutes = require("./routes/user");
 
-
 //Use .env file in config folder
 require("dotenv").config({ path: "./config/.env" });
 
@@ -51,12 +50,13 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
+
 //Use flash messages for errors, info, ect...
 app.use(flash());
 
 //Setup Routes For Which The Server Is Listening
 app.use("/", mainRoutes);
-app.use("/user", userRoutes);
+app.use("/", userRoutes);
 
 //Server Running
 app.listen(process.env.PORT, () => {

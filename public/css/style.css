@@ -1,26 +1,57 @@
-html{
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+body{
+  padding: 10px;
 }
 
-body {
-  width: 100%;
-}
-
-
-.header > nav {
+.header, .footer {
   height: 100px;
-  width: 100%;
+
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
+
 
 img {
   width: 200px;
   height: 200px;
   border-radius: 50%;
+}
+
+
+.indexLandingForm{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+input {
+  display: flex;
+
+  margin: 10px;
+  height: 50px;
+  width: 400px;
+
+  font-size: 50px;
+
+  border: none;
+  border-bottom: 1px solid lightgrey;
+}
+input:focus{
+  outline: none;
+}
+
+.loginButtons {
+  display: flex;
+  gap: 30px;
+  margin: 50px;
+}
+.indexButton {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
 }
