@@ -1,9 +1,10 @@
 import './App.css';
 
+
 function App() {
   return (
     <div className="App">
-      <h1>Hello world, this is Booking Buddy</h1>
+
     </div>
   );
 }
